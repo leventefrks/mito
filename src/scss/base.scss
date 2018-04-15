@@ -1,0 +1,368 @@
+@import 'vendor/reset';
+
+@import 'vendor/normalize';
+
+@import 'typography';
+
+@import 'colors';
+
+@import 'variables';
+
+@import 'mixins';
+
+@import 'media';
+
+@import 'header';
+
+body{
+    background: $background url(../img/w-background.svg) no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-attachment: fixed;
+    height: 1500px;
+    max-width: 1024px;
+    margin: 0 auto;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: $font;
+}
+
+.flight-info{
+    &__text{
+        text-transform:uppercase;
+        color: $white;
+    }
+}
+
+.main{
+    display: grid;
+    grid-column-gap: 28px;
+        grid-template-columns: 223px 1fr 1fr;
+        grid-template-rows: auto auto 1fr;
+		grid-template-areas:
+        ". select-flight select-flight"
+        "sidebar discount discount"
+        "sidebar flight-info flight-info";
+        @include padding(0,28px,28px,28px);
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background: transparent;
+    .sidebar__details{
+        @include margin(14px,0,18px,0);
+        @include padding(0,21px,0,21px);
+        .sidebar__sub-title{
+            font-weight: 900;
+            @include text-transform(y);
+            @include margin(0,0,14px,0);
+            &--default{
+                color: $blue-dark;
+            }
+        }
+        &-item{
+            @include flex-space-between;
+            white-space: nowrap;
+            @include margin(10px,0,10px,0);
+            &__sub-title{
+                font-size: 14px;
+            }
+            &__price{
+                font-size: 14px;
+                line-height: 18px;
+                color: $blue-dark;
+            }
+        }
+    }
+    .total{
+        @include flex-space-between;
+        background-color: $blue-dark-total;
+        color:$white;
+        @include padding(22px,18px,22px,18px);
+        @include border-radius(5px,5px,5px,5px);
+        &__text{
+            font-size: 16px;
+            font-weight: 900;
+            @include text-transform(y);
+        }
+        &__price{
+            font-size: 16px;
+            font-weight: 900;
+        }
+    }
+    .booking-payment{
+        text-align: center;
+        @include text-transform(y);
+        color: $blue-dark;
+        font-weight: 900;
+        border-bottom: dotted 2px $grey-dark;
+        @include padding(17px,0,17px,0); 
+        @include margin(0,0,0,0); 
+    }
+    .discount-club-price{
+        background-color: $white;
+        @include border-radius(3px,3px,3px,3px);
+        &__inner{
+            @include padding(0,17px,0,17px);
+        }
+        &__sub-title{
+            text-align: center;
+            @include text-transform(y);
+            font-size: 12px;
+            font-weight: 900;
+            color: $blue-dark;
+            border-bottom: 1px solid $grey-light;
+            @include margin(20px,0,0,0);
+            @include padding(20px,0,10px,0);
+        }
+        &__total{
+            font-size: 16px;
+            font-weight: 900;
+            &-text{
+                @include text-transform(y);
+                color: $blue-dark;
+            }
+            &-price{
+                @include text-transform(y);
+                color: $blue-dark;
+            }
+        }
+        &__original{
+            font-size: 14px;
+            font-weight: 900;
+            &-text{
+                @include text-transform(y);
+                color: $font-grey;
+            }
+            &-price{
+                @include text-transform(y);
+                color: $font-grey;
+            }
+        }
+        &__details{
+            @include padding(20px,0,20px,0);
+            &__item{
+                @include flex-space-between;
+                @include margin(0,0,16px,0);      
+            }
+        }
+        &__cta{
+            width: 100%;
+            border: none;
+            @include text-transform(y);
+            color: $white;
+            text-align: center;
+            background-color: $pink-dark;
+            font-weight: 400;
+            font-size: 16px;
+            @include padding(16px,0,16px,0);
+            @include border-radius(3px,3px,3px,3px);
+            transition: all .24s ease-in;
+            &:hover{
+                background-color: $pink-light;
+
+            }
+        }
+    }
+}
+
+.flight-info{
+    grid-area: flight-info;
+    background-color: $white;
+    @include border-radius(3px,3px,3px,3px);
+    height: 800px;
+    &__header{
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: $grey-dark;
+    }
+    &__flight-type{
+        flex: 1;
+        color: $font-grey;
+        font-size: 16px;
+        font-weight: 900;
+        @include padding(0,0,0,30px);
+        @include text-transform(y);    
+    }
+    &__flight-details{
+        font-weight: 600;
+        color: $blue-dark;
+        font-size: 22px;
+        flex: 3;
+
+        &__origin, &__destination{
+            text-transform: capitalize;
+        }
+    }
+    .flight-package-types{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(4, auto);
+        border-bottom: 1px solid $grey-light;
+
+        &__details{ 
+            @include padding(0,0,20px,0);
+            &:nth-child(3){
+                background-color: $grey-light;
+            }
+            &-schedule{
+                text-align: center;
+                &-time{
+                    font-size: 16px;
+                }
+                &-icon{
+                    @include margin(0,5px,0,5px);
+                }
+            }
+            &-item{
+                @include padding(0,9px,0,9px);
+                &__type{
+                   @include text-transform(y);
+                   @include margin(0,0,0,0);
+                   @include padding(22px,0,20px,0);
+                   color: $font;
+                   font-size: 12px;
+                   font-weight: 700;
+                   text-align: center;
+                }
+                &__btn{
+                 @include margin(0,0,42px,0);
+                    @include flight-package-types__details-item__btn--default;
+                }
+                &__info{
+                    &-title{
+                        font-size: 12px;
+                        font-weight: 900;
+                        color: $font;
+                        @include text-transform(y);
+                        @include margin(0,0,0,0);
+                    }
+                    &-details{
+                        font-size: 14px;
+                        list-style-type: disc;
+                        &-item{
+                            display: list-item;
+                            @include margin(10px,0,0,0);     
+                        }
+                    }
+                }      
+            }
+        }
+    }
+
+
+
+    .additional-info{
+        height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid $grey-light;
+        @include padding(0,20px,0,20px);
+        @include text-transform(y);
+        &__more-dates{
+            font-size: 14px;
+            font-weight: 900;
+            color: $font;
+        }
+        &__calendar, &__chart{
+            color: $font;
+            font-size: 12px;
+            font-weight: 900;
+            text-decoration: none;
+            transition: all .24s ease-in;
+            &:hover{
+                color: $pink-hover;
+                text-decoration: underline;
+            }
+       }
+        &__calendar{
+            @include margin(0,8px,0,0);
+            &--active{
+                color: $pink-dark;
+                text-decoration: underline;
+            } 
+        }
+        &__chart{
+            &--active{
+                color: $pink-dark;
+                text-decoration: underline;
+            }
+            @include margin(0,0,0,8px);
+        }
+    }
+}
+
+.select-flight {
+    grid-area: select-flight;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: flex-start;
+    @include margin(35px,0,24px,0);
+    &__icon{
+        margin-right: 12px;
+    }
+    &__title{
+        color: $blue-dark;
+        @include text-transform(y);
+        font-size: 40px;
+        letter-spacing: 3px;
+        @include margin(0,0,0,0);
+    }
+}
+
+.discount{
+    grid-area: discount;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $white;
+    @include margin(0,0,21px,0);
+    @include padding(32px,17px,32px,20px);
+    @include border-radius(3px,3px,3px,3px);
+
+    &__inner{
+        display: flex;
+        align-items: center;
+    }
+
+&__cta{
+        border: 2px solid $pink-dark;
+        color: $pink-dark;
+        background: transparent;
+        font-weight: 900;
+        @include text-transform(y);
+        @include padding(17px,56px,17px,56px);
+        @include margin(0,15px,0,0);
+        @include border-radius(3px,3px,3px,3px);
+        transition: all .18s ease-in;
+        font-size: 14px;
+        &:hover{
+            background-color: $pink-dark;
+            color: $white;
+        }
+    }
+    &__details{
+        display: flex;
+        flex-direction: column;
+        color: $font;
+        font-size: 14px;
+        @include margin(0,0,0,15px);
+        &__on-flight{
+            @include margin(0,0,12px,0);
+        }
+    }
+   &__read-more-link{
+        color: $pink-dark;
+        @include text-transform(y);
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: .1px;
+        transition: all .24s ease-in;
+        &:hover{
+            color: $pink-hover;
+            transform:scale(1.1);
+        }
+    }
+}

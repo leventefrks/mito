@@ -1,0 +1,43 @@
+.header{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    z-index: 50;
+    height: auto;
+    &__inner{
+        background: $blue-dark;
+        display: flex;
+        align-items: center;
+        @include padding(10px,0,10px,28px); 
+        .nav{
+            display: flex;
+            &__cross{
+                flex: 1;
+            }
+            &__flight-details{
+                &__origin{
+                    display: flex;
+                    flex-direction: column;
+                    flex: 3;
+                    color: $white;
+                    &-text{
+                        font-size:12px;
+                        @include text-transform(y);
+                    }
+                    &-city{
+                        font-size: 22px;
+                        font-weight: 600;
+                        text-transform: capitalize;
+                        &-short{
+                            @include text-transform(y);
+                            color: $blue-light;
+                        }
+                    }
+                }
+            }
+            &__direction{
+                @include margin(0,24px,0,24px);
+            }
+        }
+    }
+}

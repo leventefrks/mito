@@ -1,0 +1,28 @@
+{
+  "name": "mito-homework",
+  "version": "1.0.0",
+  "description": "wizzair sitebuild",
+  "main": "index.js",
+  "dependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1"
+  },
+  "devDependencies": {
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify-css": "^1.2.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "wizzair",
+    "sitebuild",
+    "wizzairsitebuild",
+    "frontenddev",
+    "frontendevelopment"
+  ],
+  "author": "Levente Farkas",
+  "license": "ISC"
+}
