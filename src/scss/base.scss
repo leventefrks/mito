@@ -195,11 +195,35 @@ body{
             text-transform: capitalize;
         }
     }
+    &__flight-date{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include padding(18px,20px,18px,20px);
+        &__date{
+            font-size: 12px;
+            color: $font-grey;
+            font-weight: 700;
+            @include text-transform(y);
+        }
+        &__current-date{
+            font-size: 18px;
+            text-transform: capitalize;         
+        }
+        &__icon{
+            &--previous{
+              @include margin(0,20px,0,0);
+            }
+            &--next{
+                @include margin(0,0,0,20px);
+            }
+        }
+    }
     .flight-package-types{
         display: grid;
         grid-template-columns: repeat(4,1fr);
         grid-template-rows: repeat(4, auto);
-        border-bottom: 1px solid $grey-light;
+        border-top: 1px solid $grey-light;
 
         &__details{ 
             @include padding(0,0,20px,0);
