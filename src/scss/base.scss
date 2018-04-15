@@ -270,6 +270,7 @@ body{
                     &-details{
                         font-size: 14px;
                         list-style-type: disc;
+                        @include padding(0,0,0,15px);
                         &-item{
                             display: list-item;
                             @include margin(10px,0,0,0);     
