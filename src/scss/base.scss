@@ -79,14 +79,13 @@ body{
         color:$white;
         @include padding(22px,18px,22px,18px);
         @include border-radius(5px,5px,5px,5px);
+        font-size: 16px;
+        font-weight: 900;
         &__text{
-            font-size: 16px;
-            font-weight: 900;
             @include text-transform(y);
         }
         &__price{
-            font-size: 16px;
-            font-weight: 900;
+            font-size: 20px;
         }
     }
     .booking-payment{
@@ -122,6 +121,7 @@ body{
                 color: $blue-dark;
             }
             &-price{
+                font-size: 20px;
                 @include text-transform(y);
                 color: $blue-dark;
             }
