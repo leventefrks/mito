@@ -200,6 +200,10 @@ body{
         justify-content: space-between;
         align-items: center;
         @include padding(18px,20px,18px,20px);
+        &__inner{
+            display: flex;
+            align-items:center;
+        }
         &__date{
             font-size: 12px;
             color: $font-grey;
@@ -208,6 +212,7 @@ body{
         }
         &__current-date{
             font-size: 18px;
+            color: $font;
             text-transform: capitalize;         
         }
         &__icon{
