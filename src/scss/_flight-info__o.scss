@@ -1,6 +1,5 @@
 .flight-info {
-    grid-column: 2 / -1;
-    grid-row: 3;
+    grid-area: flight-info;
     background-color: $white;
     @include border-radius(3px);
     &__header {
@@ -15,7 +14,10 @@
         color: $font-grey;
         font-size: $normal;
         font-weight: 900;
-        @include padding(0, 0, 0, 30px);
+        @include padding(0,
+        0,
+        0,
+        30px);
         @include text-transform(y);
     }
     &__flight-details {
@@ -32,7 +34,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        @include padding(18px, 20px, 18px, 20px);
+        @include padding(18px,
+        20px,
+        18px,
+        20px);
         &__inner {
             display: flex;
             align-items: center;
@@ -50,94 +55,122 @@
         }
         &__icon {
             &--previous {
-                @include margin(0, 20px, 0, 0);
+                @include margin(0,
+                20px,
+                0,
+                0);
             }
             &--next {
-                @include margin(0, 0, 0, 20px);
+                @include margin(0,
+                0,
+                0,
+                20px);
             }
         }
     }
     .flight-package-types {
         display: grid;
-        grid-template-columns: 167px repeat(3, 1fr);
-        grid-auto-flow: row;
+        grid-template-columns:repeat(4,1fr);
         border-top: 1px solid $grey-light;
-        .flight-package-header {
-            display: flex;
-            justify-content: space-around;
-            grid-column: 2 / -1;
-            grid-template-rows: 1;
-            &__title {
-                flex: 1;
-                text-align: center;
-                color: $font;
-                font-size: $extra-small;
-                font-weight: 700;
-                @include text-transform(y);
-                @include margin(0, 0, 0, 0);
-                @include padding(22px, 0, 0, 0);
-                &--basic {}
-                &--standard {
-                    background-color: $grey-light;
-                }
-                &--plus {}
-            }
-        }
         .flight-schedule {
             grid-column: 1 / 2;
-            grid-row: 2 / auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            flex: 1;
+            grid-row-start: 2;
             &__time {
-                @include margin(20px, 0, 20px, 0);
-                @include padding(18px, 0, 18px, 0);
+                display: flex;
+                justify-content: center;
+                @include margin(0,
+                0,
+                40px,
+                0);
+                @include padding(20px,
+                0,
+                20px,
+                0);
+                &-text {
+                    font-size: $normal;
+                }
                 &-icon {
-                    @include margin(0, 5px, 0, 5px);
+                    @include margin(0,
+                    5px,
+                    0,
+                    5px);
                 }
             }
         }
-        .flight-packages {
-            grid-column: 2 / 5;
-            grid-row: 2 / 5;
-            display: flex;
-            justify-content: space-around;
-            &__package {
-                display: flex;
-                flex-direction: column;
-                flex: 1;
-                @include padding(0, 9px, 18px, 9px);
-                &--basic {}
-                &--standard {
-                    background-color: $grey-light;
+        .flight-package-title {
+            color: $font;
+            font-size: $extra-small;
+            font-weight: 700;
+            text-align: center;
+            @include text-transform(y);
+            @include margin(0,
+            0,
+            0,
+            0);
+            @include padding(22px,
+            0,
+            20px,
+            0);
+            &--basic {
+                grid-column: 2 / 3;
+            }
+            &--standard {
+                grid-column: 3 / 4;
+                background-color: $grey-light;
+            }
+            &--plus {
+                grid-column: 4 / 5;
+            }
+        }
+        .flight-package-prices {
+            @include padding(0,
+            9px,
+            20px,
+            9px);
+            &--basic {
+                grid-column: 2 / 3;
+            }
+            &--standard {
+                grid-column: 3 / 4;
+                background-color: $grey-light;
+            }
+            &--plus {
+                grid-column: 4 / 5;
+            }
+            &__btn {
+                @include margin(0,
+                0,
+                40px,
+                0);
+                @include flight-package-prices__btn;
+            }
+            .flight-package-details {
+                &__title {
+                    font-size: $extra-small;
+                    font-weight: 900;
+                    color: $font;
+                    @include text-transform(y);
+                    @include margin(0,
+                    0,
+                    0,
+                    0);
                 }
-                &--plus {}
-                &__price-cta {
-                    @include margin(20px, 0, 20px, 0);
-                    @include flight-package-prices__btn;
-                }
-                &__details {
-                    &-title {
-                        font-size: $extra-small;
-                        font-weight: 700;
-                        color: $font;
-                        @include text-transform(y);
-                        @include margin(0, 0, 0, 0);
-                    }
-                    &__list {
-                        font-size: $small;
-                        list-style-type: disc;
-                        @include padding(0, 0, 0, 16px);
-                        &-item {
-                            display: list-item;
-                            @include margin(10px, 0, 0, 0);
-                        }
+                &__list {
+                    font-size: $small;
+                    list-style-type: disc;
+                    @include padding(0,
+                    0,
+                    0,
+                    16px);
+                    &-item {
+                        display: list-item;
+                        @include margin(10px,
+                        0,
+                        0,
+                        0);
                     }
                 }
             }
-            
         }
     }
     .additional-info {
@@ -147,7 +180,10 @@
         align-items: center;
         justify-content: space-between;
         border-top: 1px solid $grey-light;
-        @include padding(0, 20px, 0, 20px);
+        @include padding(0,
+        20px,
+        0,
+        20px);
         @include text-transform(y);
         &:after {
             content: '';
@@ -179,7 +215,10 @@
             }
         }
         &__calendar {
-            @include margin(0, 8px, 0, 0);
+            @include margin(0,
+            8px,
+            0,
+            0);
             &--active {
                 color: $pink-dark;
                 text-decoration: underline;
@@ -190,7 +229,10 @@
                 color: $pink-dark;
                 text-decoration: underline;
             }
-            @include margin(0, 0, 0, 8px);
+            @include margin(0,
+            0,
+            0,
+            8px);
         }
     }
     .flight-date {
@@ -200,23 +242,35 @@
         align-items: center;
         background-color: $grey-dark;
         &__icon {
-            @include padding(0, 10px, 0, 10px);
+            @include padding(0,
+            10px,
+            0,
+            10px);
         }
         &__available-day-list {
             display: flex;
-            @include padding(40px, 0, 20px, 0);
+            @include padding(40px,
+            0,
+            20px,
+            0);
             &-item {
                 height: 80px;
                 border: 2px solid $grey-light;
                 background-color: $white;
                 cursor: pointer;
                 @include border-radius(3px);
-                @include padding(6px, 6px, 6px, 6px);
-                @include margin(0, 2px, 0, 2px);
+                @include padding(6px,
+                6px,
+                6px,
+                6px);
+                @include margin(0,
+                2px,
+                0,
+                2px);
                 &--selected-day {
                     border: 2px solid $pink-dark;
                 }
-                &--not-available-day {
+                &--not-available-day{
                     display: flex;
                     justify-content: center;
                     align-items: center;

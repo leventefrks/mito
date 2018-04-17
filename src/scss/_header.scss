@@ -5,15 +5,19 @@
     height: auto;
     background-color: $blue-dark;
     box-sizing: border-box;
-
     &__inner {
         display: flex;
         align-items: center;
         @include padding(10px, 28px, 10px, 28px);
-        .logo{
+        .logo {
+            cursor: pointer;
+            transition: all .24s ease-in;
             @include margin(0, 50px, 0, 0);
+            &:hover {
+                transform: rotate(360deg);
+            }
         }
-        .flight-short-info-details{
+        .flight-short-info-details {
             display: inline-flex;
         }
         .flight-short-info {
@@ -24,7 +28,7 @@
                 display: flex;
                 align-items: flex-end;
             }
-            &:first-child{
+            &:first-child {
                 @include margin(0, 0, 0, 30px);
             }
             &__text {
@@ -58,9 +62,9 @@
                 font-size: $extra-small;
                 @include text-transform(y);
             }
-            &__info{
-                @include margin(0,12px,0,0);
-                &-number{
+            &__info {
+                @include margin(0, 12px, 0, 0);
+                &-number {
                     font-size: $extra-large;
                     font-weight: 900;
                 }

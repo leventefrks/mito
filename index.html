@@ -237,89 +237,86 @@
             </div>
             <!--flight package types-->
             <div class="flight-package-types">
+                <!--flight package title -->
+                <div class="flight-package-header">
+                    <h6 class="flight-package-header__title flight-package-header__title--basic">
+                        basic
+                    </h6>
+                    <h6 class="flight-package-header__title flight-package-header__title--standard">
+                        standard
+                    </h6>
+                    <h6 class="flight-package-header__title flight-package-header__title--plus">
+                        plus
+                    </h6>
+                </div>
+                <!--flight package title-->
                 <!--flight schedule -->
                 <ul class="flight-schedule">
                     <li class="flight-schedule__time">
-                        <span class="flight-schedule__time-text">06:15</span>
-                        <img src="dist/img/w-arrow-angle-right-grey.svg" class="flight-schedule__time-icon" alt="fight schedule arrow">
-                        <span class="flight-schedule__time-text">08:20</span>
+                        <time class="flight-schedule__time-text">06:15</span>
+                            <img src="dist/img/w-arrow-angle-right-grey.svg" class="flight-schedule__time-icon" alt="fight schedule arrow">
+                            <time class="flight-schedule__time-text">08:20</time>
                     </li>
                     <li class="flight-schedule__time">
-                        <span class="flight-schedule__time-text">09:15</span>
+                        <time class="flight-schedule__time-text">09:15</time>
                         <img src="dist/img/w-arrow-angle-right-grey.svg" class="flight-schedule__time-icon" alt="fight schedule arrow">
-                        <span class="flight-schedule__time-text">10:20</span>
+                        <time class="flight-schedule__time-text">10:20</time>
                     </li>
-                    <ul class="flight-schedule__time">
-                        <span class="flight-schedule__time-text">17:15</span>
+                    <li class="flight-schedule__time">
+                        <time class="flight-schedule__time-text">17:15</time>
                         <img src="dist/img/w-arrow-angle-right-grey.svg" class="flight-schedule__time-icon" alt="fight schedule arrow">
-                        <span class="flight-schedule__time-text">18:20</span>
-                    </ul>
+                        <time class="flight-schedule__time-text">18:20</time>
+                    </li>
                 </ul>
                 <!--flight schedule-->
-                <!--flight package title -->
-                <div class="flight-package-title flight-package-title--basic">
-                    basic
-                </div>
-                <div class="flight-package-title flight-package-title--standard">
-                    standard
-                </div>
-                <div class="flight-package-title flight-package-title--plus">
-                    plus
-                </div>
-                <!--flight package title-->
-                <!--flight package prices -->
-                <!--flight package basic -->
-                <div class="flight-package-prices flight-package-prices--basic">
-                    <button class="flight-package-prices__btn">€9.99</button>
-                    <button class="flight-package-prices__btn">€9.99</button>
-                    <button class="flight-package-prices__btn">€9.99</button>
-                    <div class="flight-package-details flight-package-details--basic">
-                        <h6 class="flight-package-details__title">just the essentials</h6>
-                        <ul class="flight-package-details__list">
-                            <li class="flight-package-details__list-item">Flight ticket</li>
-                            <li class="flight-package-details__list-item">1 small cabin</li>
-                        </ul>
-                    </div>
-                </div>
-                <!--flight package basic -->
-                <!--flight package standard -->
-                <div class="flight-package-prices flight-package-prices--standard">
-                    <button class="flight-package-prices__btn">€19.99</button>
-                    <button class="flight-package-prices__btn">€19.99</button>
-                    <button class="flight-package-prices__btn">€19.99</button>
-                    <div class="flight-package-details flight-package-details--standard">
-                        <h6 class="flight-package-details__title">€2.25 cheaper in bundle</h6>
-                        <ul class="flight-package-details__list">
-                            <li class="flight-package-details__list-item">Flight ticket</li>
-                            <li class="flight-package-details__list-item">1 large cabin</li>
-                            <li class="flight-package-details__list-item">Seat selection</li>
-                        </ul>
-                    </div>
-                </div>
-                <!--flight package standard -->
-                <!--flight package plus -->
-                <div class="flight-package-prices flight-package-prices--plus">
-                    <button class="flight-package-prices__btn">€29.99</button>
-                    <button class="flight-package-prices__btn">€29.99</button>
-                    <button class="flight-package-prices__btn">€29.99</button>
-                    <div class="flight-package-details flight-package-details--plus">
-                        <h6 class="flight-package-details__title">€3.25 cheaper in bundle</h6>
-                        <ul class="flight-package-details__list">
-                            <li class="flight-package-details__list-item">Flight ticket</li>
-                            <li class="flight-package-details__list-item">1 large cabin</li>
-                            <li class="flight-package-details__list-item">1 heavy checked-in bag</li>
-                            <li class="flight-package-details__list-item">+1 personal item onboard</li>
-                            <li class="flight-package-details__list-item">Seat selection</li>
-                            <li class="flight-package-details__list-item">Flex for flight changes</li>
-                            <li class="flight-package-details__list-item">Priority boarding</li>
-                        </ul>
-                    </div>
-                </div>
-                <!--flight package plus -->
-                <!--flight package prices -->
+                <!-- flight package prices-->
+                <ul class="flight-packages">
+                    <li class="flight-packages__package flight-packages__package--basic">
+                        <button class="flight-packages__package__price-cta">€9.99</button>
+                        <button class="flight-packages__package__price-cta">€9.99</button>
+                        <button class="flight-packages__package__price-cta">€9.99</button>
+                        <div class="flight-packages__package__details flight-package-details--basic">
+                            <h6 class="flight-packages__package__details-title">just the essentials</h6>
+                            <ul class="flight-packages__package__details__list">
+                                <li class="flight-packages__package__details__list-item">Flight ticket</li>
+                                <li class="flight-packages__package__details__list-item">1 small cabin</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="flight-packages__package flight-packages__package--standard">
+                        <button class="flight-packages__package__price-cta">€19.99</button>
+                        <button class="flight-packages__package__price-cta">€19.99</button>
+                        <button class="flight-packages__package__price-cta">€19.99</button>
+                        <div class="flight-packages__package__details flight-package-details--standard">
+                            <h6 class="flight-packages__package__details-title">€2.25 cheaper in bundle</h6>
+                            <ul class="flight-packages__package__details__list">
+                                <li class="flight-packages__package__details__list-item">Flight ticket</li>
+                                <li class="flight-packages__package__details__list-item">1 large cabin</li>
+                                <li class="flight-packages__package__details__list-item">Seat selection</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="flight-packages__package flight-packages__package--plus">
+                        <button class="flight-packages__package__price-cta">€29.99</button>
+                        <button class="flight-packages__package__price-cta">€29.99</button>
+                        <button class="flight-packages__package__price-cta">€29.99</button>
+                        <div class="flight-packages__package__details flight-package-details--plus">
+                            <h6 class="flight-packages__package__details-title">€3.25 cheaper in bundle</h6>
+                            <ul class="flight-packages__package__details__list">
+                                <li class="flight-packages__package__details__list-item">Flight ticket</li>
+                                <li class="flight-packages__package__details__list-item">1 large cabin</li>
+                                <li class="flight-packages__package__details__list-item">1 heavy checked-in bag</li>
+                                <li class="flight-packages__package__details__list-item">+1 personal item onboard</li>
+                                <li class="flight-packages__package__details__list-item">Seat selection</li>
+                                <li class="flight-packages__package__details__list-item">Flex for flight changes</li>
+                                <li class="flight-packages__package__details__list-item">Priority boarding</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <!-- flight package prices-->
             </div>
             <!--flight package types-->
-
             <!--additional info-->
             <div class="additional-info">
                 <span class="additional-info__more-dates">

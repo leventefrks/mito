@@ -1,5 +1,6 @@
 .itinerary {
-    grid-area: itinerary;
+    grid-column: 1 / 2;
+    grid-row: 2 / -1;
     background: transparent;
     .itinerary__details {
         position: relative;

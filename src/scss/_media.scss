@@ -17,20 +17,25 @@
     .main {
         grid-template-columns: 1fr;
         grid-column-gap: 0;
-        grid-template-areas: "booking-title" "discount-club" "flight-info" "itinerary";
         @include padding(0, 8px, 0, 8px);
         .booking-title {
+            grid-column: 1 / -1;
+            justify-content: center;
             &__title {
                 font-size: $medium;
             }
         }
         .discount-club {
+            grid-column: 1 / -1;
+            grid-row: 2;
             @include padding(16px, 16px, 16px, 16px);
             &__cta {
                 @include padding(9px, 28px, 9px, 28px);
             }
         }
         .flight-info {
+            grid-column: 1 / -1;
+            grid-row: 3;
             &__header {
                 @include padding(0, 0, 0, 0);
             }
@@ -42,6 +47,8 @@
             }
         }
         .itinerary {
+            grid-column: 1 / -1;
+            grid-row: 4;
             &__details {
                 justify-content: space-around;
                 &-item {
@@ -74,20 +81,26 @@
         }
     }
     .main {
+        grid-column: 1 / -1;
+        @include padding(0, 8px, 0, 8px);
+        .booking-title{
+            @include margin(25px,0,14px,0);
+        }
         .flight-package-types {
-            grid-template-columns: auto repeat(3,1fr);
-            .flight-schedule {
-                grid-template-columns: auto;
-                background-color: pink;
-                &__time {
-                    @include margin(10px, 10px, 10px, 10px);
-                }
+            grid-template-columns: 1fr;
+            grid-auto-rows: auto;
+            .flight-package-header {
+                grid-column: 1 / -1;
             }
-            .flight-package-prices {
-                &__btn {
-                    @include padding(10px, 0, 10px, 0);
-                    @include margin(10px, 10px, 10px, 10px);
-                }
+            .flight-schedule {
+                grid-column: 1 / -1;
+                grid-auto-rows: auto;
+                grid-row: 2;
+                justify-content: space-around;
+                flex-direction: row;
+            }
+            .flight-packages{
+                grid-column: 1 / -1;
             }
         }
     }
