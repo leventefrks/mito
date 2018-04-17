@@ -1,12 +1,13 @@
-var gulp = require('gulp'),
+const gulp = require('gulp'),
     minifyCSS = require('gulp-minify-css'),
     concat = require('gulp-concat'),
     prefix = require('gulp-autoprefixer'),
     sass = require('gulp-sass'),
+    purify = require('gulp-purifycss'),
     bs = require('browser-sync').create();
 
 
-gulp.task('styles', function(){
+gulp.task('styles', ()=>{
     return gulp.src('src/scss/base.scss')
     .pipe(sass())
     .pipe(prefix('last 2 versions'))
@@ -16,7 +17,13 @@ gulp.task('styles', function(){
     .pipe(bs.reload({stream: true}))
 });
 
-gulp.task('browser-sync', function() {
+gulp.task('postcss', function() {
+    return gulp.src('./dist/css/*.css')
+      .pipe(purify('index.html'))
+      .pipe(gulp.dest('./dist/css'));
+  });
+
+gulp.task('browser-sync', ()=> {
     bs.init({
         server: {
             baseDir: "./"
@@ -24,7 +31,7 @@ gulp.task('browser-sync', function() {
     });
 });
 
-gulp.task('watch', ['browser-sync'], function () {
+gulp.task('watch', ['browser-sync'], ()=> {
     gulp.watch("src/scss/*.scss", ['styles']);
     gulp.watch("*.html").on('change', bs.reload);
 });

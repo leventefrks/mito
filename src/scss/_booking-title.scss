@@ -1,0 +1,17 @@
+.booking-title {
+    grid-area: booking-title;
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    @include margin(35px, 0, 24px, 0);
+    &__icon {
+        margin-right: 12px;
+    }
+    &__title {
+        color: $blue-dark;
+        @include text-transform(y);
+        font-size: 40px;
+        letter-spacing: 3px;
+        @include margin(0, 0, 0, 0);
+    }
+}

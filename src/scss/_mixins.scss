@@ -12,11 +12,11 @@
     margin-left: $left;
   }
 
-  @mixin border-radius($top, $right, $bottom, $left) {
-   border-top-left-radius: $top;
-    border-top-right-radius: $right;
-    border-bottom-left-radius: $bottom;
-    border-bottom-right-radius: $bottom;
+  @mixin border-radius($v) {
+   border-top-left-radius: $v;
+    border-top-right-radius: $v;
+    border-bottom-left-radius: $v;
+    border-bottom-right-radius: $v;
   }
 
   @mixin flex-center {
@@ -30,32 +30,20 @@
       justify-content: space-between;
   }
 
-  @mixin text-transform($v) {
-    @if $v == 'y' {
+  @mixin text-transform($y){
       text-transform: uppercase;
-     }
   }
 
-/*
-  @mixin text-transform($v) {
-    @if $v == 'cap' {
-      text-transform: capitalize;
-     }@else{
-      text-transform: uppercase;
-     }
-  }
-  */
-
-  @mixin flight-package-types__details-item__btn--default{
+  @mixin flight-package-prices__btn{
     color: $font;
     font-size: 20px;
     font-weight: 900;
     background-color: $white;
     border: 2px solid $pink-dark;
     outline: none;
-    width: 100%;
-    @include padding(16px,0,16px,0);
-    @include border-radius(3px,3px,3px,3px);
+    min-width: 100%;
+    @include padding(15px,0,15px,0);
+    @include border-radius(3px);
     transition: all .24s ease-in;
     &:hover{
       background-color: $pink-dark;

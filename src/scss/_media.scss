@@ -1,9 +1,94 @@
-@media only screen and (max-width: 768px){
-  
-    .main{
-        @include padding(0,8px,8px,8px);
+@media screen and (max-width: 1024px) {
+    .header {
+        font-size: $medium;
+        .logo {
+            @include margin(0, 0, 0, 0);
+        }
+        &__inner {
+            justify-content: space-between;
+        }
+        .flight-short-info {
+            @include margin(0, 0, 0, 0);
+            &:first-child {
+                @include margin(0, 0, 0, 30px);
+            }
+        }
     }
-    .sidebar{
-        display: none;
+    .main {
+        grid-template-columns: 1fr;
+        grid-column-gap: 0;
+        grid-template-areas: "booking-title" "discount-club" "flight-info" "itinerary";
+        @include padding(0, 8px, 0, 8px);
+        .booking-title {
+            &__title {
+                font-size: $medium;
+            }
+        }
+        .discount-club {
+            @include padding(16px, 16px, 16px, 16px);
+            &__cta {
+                @include padding(9px, 28px, 9px, 28px);
+            }
+        }
+        .flight-info {
+            &__header {
+                @include padding(0, 0, 0, 0);
+            }
+            &__flight-type {
+                font-size: $small;
+            }
+            &__flight-details {
+                font-size: $medium;
+            }
+        }
+        .itinerary {
+            &__details {
+                justify-content: space-around;
+                &-item {
+                    font-size: $large;
+                    &__price {
+                        font-size: $large;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        &__inner {
+            @include padding(5px, 8px, 5px, 8px);
+        }
+        .flight-short-info {
+            &__city {
+                font-size: $small;
+            }
+        }
+        .flight-direction-icon {
+            @include margin(0, 5px, 0, 5px);
+        }
+        .passengers {
+            font-size: $small;
+        }
+    }
+    .main {
+        .flight-package-types {
+            grid-template-columns: auto repeat(3,1fr);
+            .flight-schedule {
+                grid-template-columns: auto;
+                background-color: pink;
+                &__time {
+                    @include margin(10px, 10px, 10px, 10px);
+                }
+            }
+            .flight-package-prices {
+                &__btn {
+                    @include padding(10px, 0, 10px, 0);
+                    @include margin(10px, 10px, 10px, 10px);
+                }
+            }
+        }
     }
 }

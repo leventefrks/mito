@@ -19,136 +19,161 @@
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+    <!-- main-->
+
+    <!--header -->
     <header class="header">
         <div class="header__inner">
-            <nav class="nav">
-                <img src="dist/img/w-cross.svg" class="nav__cross" alt="navigation-cross" />
-                <div class="nav__flight-details">
-                    <div class="nav__flight-details__origin">
-                        <div class="nav__flight-details__origin-text">
-                            leaving from
-                        </div>
-                        <div class="nav__flight-details__origin-city">
-                            budapest
-                            <span class="nav__flight-details__origin-city-short">
-                                bud
-                            </span>
-                        </div>
+            <!-- mito logo-->
+            <a href="https://mito.hu/" class="logo">
+                <img src="dist/img/w-cross.svg" class="logo__icon" alt="mito + a haverok : )" />
+            </a>
+            <!-- mito logo-->
+
+            <!-- flight short info -->
+            <div class="flight-short-info-details">
+                <div class="flight-short-info flight-short--origin">
+                    <span class="flight-short-info__text">
+                        leaving from
+                    </span>
+                    <div class="flight-short-info__city">
+                        <span class="flight-short-info__city-long">budapest</span>
+                        <span class="flight-short-info__city-short">bud</span>
                     </div>
                 </div>
-                <img src="dist/img/w-double-arrows.svg" class="nav__direction" alt="navigation-direction" />
-            </nav>
+                <img src="dist/img/w-double-arrows.svg" class="flight-direction-icon" alt="flight direction" />
+                <div class="flight-short-info flight-short-info--destination">
+                    <span class="flight-short-info__text">
+                        &nbsp;
+                    </span>
+                    <div class="flight-short-info__city">
+                        <span class="flight-short-info__city-long">barcelona el prat</span>
+                        <span class="flight-short-info__city-short">bcn</span>
+                    </div>
+                </div>
+            </div>
+            <!-- flight short info -->
+
+            <!-- passengers info -->
+            <div class="passengers">
+                <div class="passengers__text">passengers</div>
+                <div class="passengers__inner">
+                    <span class="passengers__info passengers__info--adult">
+                        <span class="passengers__info-number passengers__info-number--adult">2</span>
+                        <img src="dist/img/w-passenger-lg.svg" class="passengers-adult-icon" alt="adult passenger icon" />
+                    </span>
+                    <span class="passengers__info passengers__info--children">
+                        <span class="passengers__info-number passengers__info-number--children">3</span>
+                        <img src="dist/img/w-passenger-sm.svg" class="passengers-children-icon" alt="children passenger icon" />
+                    </span>
+                </div>
+            </div>
+            <!-- passengers info -->
+        </div>
     </header>
     <!--header -->
-    <!-- main-->
     <main class="main">
-        <div class="select-flight">
-            <img src="dist/img/w-plane.svg" class="select-flight__icon" alt="select-flight-icon" />
-            <h2 class="select-flight__title">select flight</h2>
-        </div>
-        <!-- discount -->
-        <div class="discount">
-            <div class="discount__inner">
-                <button class="discount__cta">
+        <!--booking title-->
+        <section class="booking-title">
+            <img src="dist/img/w-plane.svg" class="booking-title__icon" alt="booking-title-icon" />
+            <h2 class="booking-title__title">select flight</h2>
+        </section>
+        <!--booking title-->
+        <!-- discount-club -->
+        <section class="discount-club">
+            <div class="discount-club__inner">
+                <button class="discount-club__cta">
                     Show Discount Club fares
                 </button>
-                <div class="discount__details">
-                    <div class="discount__details__on-flight">
-                        €10 discount on flights
+                <div class="discount-club__details">
+                    <div class="discount-club__details__on-flight">
+                        €10 discount-club on flights
                     </div>
-                    <div class="discount__details__on-baggage">
-                        €5 discount on baggages
+                    <div class="discount-club__details__on-baggage">
+                        €5 discount-club on baggages
                     </div>
                 </div>
             </div>
-            <a href="#" class="discount__read-more-link">read more</a>
-        </div>
-        <!-- discount -->
-        <!-- sidebar-->
-        <div class="sidebar">
+            <a href="#" class="discount-club__read-more-link">read more</a>
+        </section>
+        <!-- discount-club -->
+        <!-- itinerary-->
+        <section class="itinerary">
             <!-- flight -->
-            <div class="flight">
-                <ul class="sidebar__details">
-                    <h4 class="sidebar__sub-title sidebar__sub-title--default">flights</h4>
-                    <li class="sidebar__details-item">
-                        <span class="sidebar__details-item__text">
-                            Checked-in bags
-                        </span>
-                        <span class="sidebar__details-item__price">
-                            €129
-                        </span>
-                    </li>
-                    <li class="sidebar__details-item">
-                        <span class="sidebar__details-item__text">
-                            Return
-                        </span>
-                        <span class="sidebar__details-item__price">
-                            €89
-                        </span>
-                    </li>
-                </ul>
-            </div>
+            <ul class="itinerary__details itinerary__details-flight">
+                <h4 class="itinerary__sub-title itinerary__sub-title--default">flights</h4>
+                <li class="itinerary__details-item">
+                    <span class="itinerary__details-item__text">
+                        Checked-in bags
+                    </span>
+                    <span class="itinerary__details-item__price">
+                        €129
+                    </span>
+                </li>
+                <li class="itinerary__details-item">
+                    <span class="itinerary__details-item__text">
+                        Return
+                    </span>
+                    <span class="itinerary__details-item__price">
+                        €89
+                    </span>
+                </li>
+            </ul>
             <!-- flight -->
             <!-- bundle -->
-            <div class="bundle">
-                <ul class="sidebar__details">
-                    <h4 class="sidebar__sub-title sidebar__sub-title--default">bundle</h4>
-                    <li class="sidebar__details-item">
-                        <span class="sidebar__details-item__text">
-                            Basic
-                        </span>
-                        <span class="sidebar__details-item__price">
-                            €0
-                        </span>
-                    </li>
-                </ul>
-            </div>
+            <ul class="itinerary__details itinerary__details-bundle">
+                <h4 class="itinerary__sub-title itinerary__sub-title--default">bundle</h4>
+                <li class="itinerary__details-item">
+                    <span class="itinerary__details-item__text">
+                        Basic
+                    </span>
+                    <span class="itinerary__details-item__price">
+                        €0
+                    </span>
+                </li>
+            </ul>
             <!-- flight -->
             <!-- passengers -->
-            <div class="passengers">
-                <ul class="sidebar__details">
-                    <h4 class="sidebar__sub-title sidebar__sub-title--default">passengers</h4>
-                    <li class="sidebar__details-item">
-                        <span class="sidebar__details-item__text">
-                            Cabin bags
-                        </span>
-                        <span class="sidebar__details-item__price">
-                            €10
-                        </span>
-                    </li>
-                    <li class="sidebar__details-item">
-                        <span class="sidebar__details-item__text">
-                            Checked-in bags
-                        </span>
-                        <span class="sidebar__details-item__price">
-                            €89
-                        </span>
-                    </li>
-                    <li class="sidebar__details-item">
-                        <span class="sidebar__details-item__text">
-                            Seats
-                        </span>
-                        <span class="sidebar__details-item__price">
-                            €0
-                        </span>
-                    </li>
-                </ul>
-            </div>
+            <ul class="itinerary__details itinerary__details-passengers">
+                <h4 class="itinerary__sub-title itinerary__sub-title--default">passengers</h4>
+                <li class="itinerary__details-item">
+                    <span class="itinerary__details-item__text">
+                        Cabin bags
+                    </span>
+                    <span class="itinerary__details-item__price">
+                        €10
+                    </span>
+                </li>
+                <li class="itinerary__details-item">
+                    <span class="itinerary__details-item__text">
+                        Checked-in bags
+                    </span>
+                    <span class="itinerary__details-item__price">
+                        €89
+                    </span>
+                </li>
+                <li class="itinerary__details-item">
+                    <span class="itinerary__details-item__text">
+                        Seats
+                    </span>
+                    <span class="itinerary__details-item__price">
+                        €0
+                    </span>
+                </li>
+            </ul>
             <!-- passengers -->
             <!-- services -->
-            <div class="services">
-                <ul class="sidebar__details">
-                    <h4 class="sidebar__sub-title sidebar__sub-title--default">services</h4>
-                    <li class="sidebar__details-item">
-                        <span class="sidebar__details-item__text">
-                            Priority boarding
-                        </span>
-                        <span class="sidebar__details-item__price">
-                            €15
-                        </span>
-                    </li>
-                </ul>
-            </div>
+            <ul class="itinerary__details itinerary__details-services">
+                <h4 class="itinerary__sub-title itinerary__sub-title--default">services</h4>
+                <li class="itinerary__details-item">
+                    <span class="itinerary__details-item__text">
+                        Priority boarding
+                    </span>
+                    <span class="itinerary__details-item__price">
+                        €15
+                    </span>
+                </li>
+            </ul>
             <!-- services -->
             <!-- total -->
             <div class="total">
@@ -161,30 +186,30 @@
             </div>
             <!-- total -->
             <!--booking & payment -->
-            <h4 class="booking-payment">booking & payment</h4>
+            <h4 class="booking-payment">booking &amp; payment</h4>
             <!--booking & payment -->
-            <!-- discount club price-->
-            <div class="discount-club-price">
-                <div class="discount-club-price__inner">
-                    <h6 class="discount-club-price__sub-title">discount club price</h6>
-                    <ul class="discount-club-price__details">
-                        <li class="discount-club-price__details__item discount-club-price__total">
-                            <div class="discount-club-price__total-text">total</div>
-                            <div class="discount-club-price__total-price">€182</div>
+            <!-- discount-club club price-->
+            <div class="discount-club-club-price">
+                <div class="discount-club-club-price__inner">
+                    <h6 class="discount-club-club-price__sub-title">discount-club club price</h6>
+                    <ul class="discount-club-club-price__details">
+                        <li class="discount-club-club-price__details__item discount-club-club-price__total">
+                            <div class="discount-club-club-price__total-text">total</div>
+                            <div class="discount-club-club-price__total-price">€182</div>
                         </li>
-                        <li class="discount-club-price__details__item discount-club-price__original">
-                            <div class="discount-club-price__original-text">original price</div>
-                            <div class="discount-club-price__original-price">€226</div>
+                        <li class="discount-club-club-price__details__item discount-club-club-price__original">
+                            <div class="discount-club-club-price__original-text">original price</div>
+                            <div class="discount-club-club-price__original-price">€226</div>
                         </li>
                     </ul>
                 </div>
-                <button class="discount-club-price__cta">join discount club</button>
+                <button class="discount-club-club-price__cta">join discount-club club</button>
             </div>
-            <!--discount club price- -->
-        </div>
-        <!-- sidebar-->
+            <!--discount-club club price- -->
+        </section>
+        <!-- itinerary-->
         <!-- flight-info -->
-        <div class="flight-info">
+        <section class="flight-info">
             <div class="flight-info__header">
                 <span class="flight-info__flight-type">outbound</span>
                 <div class="flight-info__flight-details">
@@ -195,114 +220,177 @@
             </div>
             <div class="flight-info__flight-date">
                 <div class="flight-info__flight-date__inner">
-                    <img src="dist/img/w-arrow-angle-left-pink.svg" class="flight-info__flight-date__icon  flight-info__flight-date__icon--previous"
-                        alt="flight-date-direction-previous" />
-                    <span class="flight-info__flight-date__date flight-info__flight-date__previous-date">wed 7 october</span>
+                    <a href="#">
+                        <img src="dist/img/w-arrow-angle-left-pink.svg" class="flight-info__flight-date__icon  flight-info__flight-date__icon--previous"
+                            alt="flight-date-direction-previous" />
+                    </a>
+                    <time class="flight-info__flight-date__date flight-info__flight-date__previous-date">wed 7 october</ti>
                 </div>
-
-                <span class="flight-info__flight-date__current-date">Saturday, 3 November 2015</span>
-               
+                <time class="flight-info__flight-date__current-date">Saturday, 3 November 2015</time>
                 <div class="flight-info__flight-date__inner">
-                    <span class="flight-info__flight-date__date flight-info__flight-date__next-date">wed 7 november</span>
-                    <img src="dist/img/w-arrow-angle-right-pink.svg" class="flight-info__flight-date__icon flight-info__flight-date__icon--next"
-                        alt="flight-date-direction-next" />
+                    <time class="flight-info__flight-date__date flight-info__flight-date__next-date">wed 7 november</time>
+                    <a href="#">
+                        <img src="dist/img/w-arrow-angle-right-pink.svg" class="flight-info__flight-date__icon flight-info__flight-date__icon--next"
+                            alt="flight-date-direction-next" />
+                    </a>
                 </div>
             </div>
             <!--flight package types-->
             <div class="flight-package-types">
-                <ul class="flight-package-types__details">
-                    <div class="flight-package-types__details-schedule">
-                        <span class="flight-package-types__details-schedule-time">06:15</span>
-                        <img src="dist/img/w-arrow-angle-right-grey.svg" class="flight-package-types__details-schedule-icon" alt="direction arrow"
-                        />
-                        <span class="flight-package-types__details-schedule-time">08:20</span>
-                    </div>
-
-                    <div class="flight-package-types__details-schedule">
-                        <span class="flight-package-types__details-schedule-time">09:15</span>
-                        <img src="dist/img/w-arrow-angle-right-grey.svg" class="flight-package-types__details-schedule-icon" alt="direction arrow"
-                        />
-                        <span class="flight-package-types__details-schedule-time">10:20</span>
-                    </div>
-
-                    <div class="flight-package-types__details-schedule">
-                        <span class="flight-package-types__details-schedule-time">17:15</span>
-                        <img src="dist/img/w-arrow-angle-right-grey.svg" class="flight-package-types__details-schedule-icon" alt="direction arrow"
-                        />
-                        <span class="flight-package-types__details-schedule-time">18:20</span>
-                    </div>
-                </ul>
-
-                <ul class="flight-package-types__details">
-                    <li class="flight-package-types__details-item">
-                        <h6 class="flight-package-types__details-item__type">basic</h6>
-                        <button class="flight-package-types__details-item__btn flight-package-types__details-item__btn--default">€9.99</button>
-                        <button class="flight-package-types__details-item__btn flight-package-types__details-item__btn--default">€9.99</button>
-                        <button class="flight-package-types__details-item__btn flight-package-types__details-item__btn--default">€9.99</button>
-
-                        <div class="flight-package-types__details-item__info">
-                            <h6 class="flight-package-types__details-item__info-title">just the essentials</h6>
-                            <ul class="flight-package-types__details-item__info-details">
-                                <li class="flight-package-types__details-item__info-details-item">Flight ticket</li>
-                                <li class="flight-package-types__details-item__info-details-item">1 small cabin</li>
-                            </ul>
-                        </div>
-
+                <!--flight schedule -->
+                <ul class="flight-schedule">
+                    <li class="flight-schedule__time">
+                        <span class="flight-schedule__time-text">06:15</span>
+                        <img src="dist/img/w-arrow-angle-right-grey.svg" class="flight-schedule__time-icon" alt="fight schedule arrow">
+                        <span class="flight-schedule__time-text">08:20</span>
                     </li>
-                </ul>
-                <ul class="flight-package-types__details">
-                    <li class="flight-package-types__details-item">
-                        <h6 class="flight-package-types__details-item__type">standard</h6>
-                        <button class="flight-package-types__details-item__btn flight-package-types__details-item__btn--default">€19.99</button>
-                        <button class="flight-package-types__details-item__btn flight-package-types__details-item__btn--default">€19.99</button>
-                        <button class="flight-package-types__details-item__btn flight-package-types__details-item__btn--default">€19.99</button>
-
-                        <div class="flight-package-types__details-item__info">
-                            <h6 class="flight-package-types__details-item__info-title">€2.25 cheaper in bundle</h6>
-                            <ul class="flight-package-types__details-item__info-details">
-                                <li class="flight-package-types__details-item__info-details-item">Flight ticket</li>
-                                <li class="flight-package-types__details-item__info-details-item">1 large cabin</li>
-                                <li class="flight-package-types__details-item__info-details-item">Seat selection</li>
-                            </ul>
-                        </div>
-
+                    <li class="flight-schedule__time">
+                        <span class="flight-schedule__time-text">09:15</span>
+                        <img src="dist/img/w-arrow-angle-right-grey.svg" class="flight-schedule__time-icon" alt="fight schedule arrow">
+                        <span class="flight-schedule__time-text">10:20</span>
                     </li>
+                    <ul class="flight-schedule__time">
+                        <span class="flight-schedule__time-text">17:15</span>
+                        <img src="dist/img/w-arrow-angle-right-grey.svg" class="flight-schedule__time-icon" alt="fight schedule arrow">
+                        <span class="flight-schedule__time-text">18:20</span>
+                    </ul>
                 </ul>
-                <ul class="flight-package-types__details">
-                    <li class="flight-package-types__details-item">
-                        <h6 class="flight-package-types__details-item__type">plus</h6>
-                        <button class="flight-package-types__details-item__btn flight-package-types__details-item__btn--default">€29.99</button>
-                        <button class="flight-package-types__details-item__btn flight-package-types__details-item__btn--default">€29.99</button>
-                        <button class="flight-package-types__details-item__btn flight-package-types__details-item__btn--default">€29.99</button>
-
-                        <div class="flight-package-types__details-item__info">
-                            <h6 class="flight-package-types__details-item__info-title">€3.25 cheaper in bundle</h6>
-                            <ul class="flight-package-types__details-item__info-details">
-                                <li class="flight-package-types__details-item__info-details-item">Flight ticket</li>
-                                <li class="flight-package-types__details-item__info-details-item">1 large cabin</li>
-                                <li class="flight-package-types__details-item__info-details-item">1 heavy checked-in bag</li>
-                                <li class="flight-package-types__details-item__info-details-item">+1 personal item onboard</li>
-                                <li class="flight-package-types__details-item__info-details-item">Seat selection</li>
-                                <li class="flight-package-types__details-item__info-details-item">Flex for flight changes</li>
-                                <li class="flight-package-types__details-item__info-details-item">Priority boarding</li>
-                            </ul>
-                        </div>
-
-                    </li>
-                </ul>
+                <!--flight schedule-->
+                <!--flight package title -->
+                <div class="flight-package-title flight-package-title--basic">
+                    basic
+                </div>
+                <div class="flight-package-title flight-package-title--standard">
+                    standard
+                </div>
+                <div class="flight-package-title flight-package-title--plus">
+                    plus
+                </div>
+                <!--flight package title-->
+                <!--flight package prices -->
+                <!--flight package basic -->
+                <div class="flight-package-prices flight-package-prices--basic">
+                    <button class="flight-package-prices__btn">€9.99</button>
+                    <button class="flight-package-prices__btn">€9.99</button>
+                    <button class="flight-package-prices__btn">€9.99</button>
+                    <div class="flight-package-details flight-package-details--basic">
+                        <h6 class="flight-package-details__title">just the essentials</h6>
+                        <ul class="flight-package-details__list">
+                            <li class="flight-package-details__list-item">Flight ticket</li>
+                            <li class="flight-package-details__list-item">1 small cabin</li>
+                        </ul>
+                    </div>
+                </div>
+                <!--flight package basic -->
+                <!--flight package standard -->
+                <div class="flight-package-prices flight-package-prices--standard">
+                    <button class="flight-package-prices__btn">€19.99</button>
+                    <button class="flight-package-prices__btn">€19.99</button>
+                    <button class="flight-package-prices__btn">€19.99</button>
+                    <div class="flight-package-details flight-package-details--standard">
+                        <h6 class="flight-package-details__title">€2.25 cheaper in bundle</h6>
+                        <ul class="flight-package-details__list">
+                            <li class="flight-package-details__list-item">Flight ticket</li>
+                            <li class="flight-package-details__list-item">1 large cabin</li>
+                            <li class="flight-package-details__list-item">Seat selection</li>
+                        </ul>
+                    </div>
+                </div>
+                <!--flight package standard -->
+                <!--flight package plus -->
+                <div class="flight-package-prices flight-package-prices--plus">
+                    <button class="flight-package-prices__btn">€29.99</button>
+                    <button class="flight-package-prices__btn">€29.99</button>
+                    <button class="flight-package-prices__btn">€29.99</button>
+                    <div class="flight-package-details flight-package-details--plus">
+                        <h6 class="flight-package-details__title">€3.25 cheaper in bundle</h6>
+                        <ul class="flight-package-details__list">
+                            <li class="flight-package-details__list-item">Flight ticket</li>
+                            <li class="flight-package-details__list-item">1 large cabin</li>
+                            <li class="flight-package-details__list-item">1 heavy checked-in bag</li>
+                            <li class="flight-package-details__list-item">+1 personal item onboard</li>
+                            <li class="flight-package-details__list-item">Seat selection</li>
+                            <li class="flight-package-details__list-item">Flex for flight changes</li>
+                            <li class="flight-package-details__list-item">Priority boarding</li>
+                        </ul>
+                    </div>
+                </div>
+                <!--flight package plus -->
+                <!--flight package prices -->
             </div>
             <!--flight package types-->
+
             <!--additional info-->
             <div class="additional-info">
                 <span class="additional-info__more-dates">
                     more dates
                 </span>
                 <div class="additional-info__right">
-                    <a href="#" class="additional-info__calendar additional-info__calendar--active">calendar</a>
-                    <a href="#" class="additional-info__chart">chart</a>
+                    <a type="button" href="#" class="additional-info__calendar additional-info__calendar--active">calendar</a>
+                    <a type="button" href="#" class="additional-info__chart">chart</a>
                 </div>
             </div>
-        </div>
+            <!--flight date -->
+            <div class="flight-date">
+                <a type="button" href="#">
+                    <img src="dist/img/w-arrow-angle-left-pink.svg" class="flight-date__icon flight-date__icon--previous" alt="previous flight date"
+                    />
+                </a>
+                <ul class="flight-date__available-day-list">
+                    <li class="flight-date__available-day-list-item">
+                        <time class="flight-date__available-day-list-item__date">mon 28</time>
+                        <div class="flight-date__available-day-list-item__highlighted"></div>
+                    </li>
+                    <li class="flight-date__available-day-list-item">
+                        <time class="flight-date__available-day-list-item__date">tue 29</time>
+                        <div class="flight-date__available-day-list-item__highlighted"></div>
+                    </li>
+                    <li class="flight-date__available-day-list-item">
+                        <time class="flight-date__available-day-list-item__date">wed 30</time>
+                        <div class="flight-date__available-day-list-item__highlighted"></div>
+                    </li>
+                    <li class="flight-date__available-day-list-item">
+                        <time class="flight-date__available-day-list-item__date">thu 1</time>
+                        <div class="flight-date__available-day-list-item__highlighted"></div>
+                    </li>
+                    <li class="flight-date__available-day-list-item">
+                        <time class="flight-date__available-day-list-item__date">fri 2</time>
+                        <div class="flight-date__available-day-list-item__highlighted"></div>
+                    </li>
+                    <li class="flight-date__available-day-list-item flight-date__available-day-list-item--selected-day">
+                        <time class="flight-date__available-day-list-item__date">sat 3</time>
+                        <div class="flight-date__available-day-list-item__highlighted"></div>
+                    </li>
+                    <li class="flight-date__available-day-list-item">
+                        <time class="flight-date__available-day-list-item__date">sun 4</time>
+                        <div class="flight-date__available-day-list-item__highlighted"></div>
+                    </li>
+                    <li class="flight-date__available-day-list-item">
+                        <time class="flight-date__available-day-list-item__date">mon 5</time>
+                        <div class="flight-date__available-day-list-item__highlighted flight-date__available-day-list-item--not-available-day">
+                            <img src="dist/img/w-not-available.svg" alt="flight date not available" />
+                        </div>
+                    </li>
+                    <li class="flight-date__available-day-list-item">
+                        <time class="flight-date__available-day-list-item__date">tue 5</time>
+                        <div class="flight-date__available-day-list-item__highlighted"></div>
+                    </li>
+                    <li class="flight-date__available-day-list-item">
+                        <time class="flight-date__available-day-list-item__date">wed 6</time>
+                        <div class="flight-date__available-day-list-item__highlighted"></div>
+                    </li>
+                    <li class="flight-date__available-day-list-item">
+                        <time class="flight-date__available-day-list-item__date">thu 7</time>
+                        <div class="flight-date__available-day-list-item__highlighted"></div>
+                    </li>
+                </ul>
+                <a type="button" href="#">
+                    <img src="dist/img/w-arrow-angle-right-pink.svg" class="flight-date__icon flight-date__icon--next" alt="next flight date"
+                    />
+                </a>
+            </div>
+            <!--flight date-->
+        </section>
         <!--additional info-->
         <!-- flight-info -->
     </main>
