@@ -12,7 +12,7 @@ body {
 .main {
     display: grid;
     grid-column-gap: 30px;
-    grid-template-columns: 231px 1fr;
+    grid-template-columns: 222px 1fr;
     grid-template-rows: auto auto auto;
     grid-auto-rows: auto;
     @include padding(0, 28px, 28px, 28px);

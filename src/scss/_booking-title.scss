@@ -11,7 +11,7 @@
     &__title {
         color: $blue-dark;
         @include text-transform(y);
-        font-size: 40px;
+        font-size: $title;
         letter-spacing: 3px;
         @include margin(0, 0, 0, 0);
     }

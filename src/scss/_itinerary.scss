@@ -35,14 +35,8 @@
             left: calc(50% - 10px);
             background: url(dist/img/w-arrow-angle-down.svg);
         }
-        @include margin(36px,
-        0,
-        36px,
-        0);
-        @include padding(0,
-        21px,
-        0,
-        21px);
+        @include margin(36px,0,36px,0);
+        @include padding(0,21px,0,21px);
         &:first-child {
             @include margin(18px,
             0,
@@ -50,18 +44,16 @@
             0);
         }
         .itinerary__sub-title {
-            font-weight: 700;
+            font-weight: 900;
             @include text-transform(y);
-            @include margin(0,
-            0,
-            14px,
-            0);
+            @include margin(0,0,14px,0);
             &--default {
                 color: $blue-dark;
             }
         }
         &-item {
             @include flex-space-between;
+            font-size: $small;
             white-space: nowrap;
             &__sub-title {
                 font-size: $small;
@@ -73,10 +65,10 @@
             }
         }
     }
-    .total {
+    .total-price {
         color: $white;
         font-size: $normal;
-        font-weight: 700;
+        font-weight: 600;
         background-color: $blue-dark-total;
         @include flex-space-between;
         @include padding(22px,
@@ -96,7 +88,7 @@
         position: relative;
         @include text-transform(y);
         color: $blue-dark;
-        font-weight: 700;
+        font-weight: 900;
         @include padding(17px,
         0,
         17px,
@@ -117,9 +109,13 @@
     }
     .discount-club-club-price {
         background-color: $white;
+        @include margin(20px,
+            0,
+            0,
+            0);
         @include border-radius(3px);
         &__inner {
-            @include padding(0,
+            @include padding(17px,
             17px,
             0,
             17px);
@@ -128,21 +124,21 @@
             text-align: center;
             @include text-transform(y);
             font-size: $extra-small;
-            font-weight: 700;
+            font-weight: 900;
             color: $blue-dark;
             border-bottom: 1px solid $grey-light;
-            @include margin(20px,
+            @include margin(0,
             0,
             0,
             0);
-            @include padding(20px,
+            @include padding(0,
             0,
             10px,
             0);
         }
         &__total {
             font-size: $normal;
-            font-weight: 700;
+            font-weight: 600;
             &-text {
                 @include text-transform(y);
                 color: $blue-dark;
