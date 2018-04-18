@@ -1,5 +1,6 @@
 .header {
-    min-width: 100%;
+    position: relative;
+    max-width: 1024px;
     overflow: hidden;
     z-index: 50;
     height: auto;
@@ -10,11 +11,12 @@
         align-items: center;
         @include padding(10px, 28px, 10px, 28px);
         .logo {
-            cursor: pointer;
-            transition: all .24s ease-in;
             @include margin(0, 50px, 0, 0);
-            &:hover {
-                transform: rotate(360deg);
+            &__icon{
+                transition: all .64s ease-in;
+                &:hover {
+                    transform: rotate(360deg);
+                }
             }
         }
         .flight-short-info-details {
@@ -25,8 +27,7 @@
             color: $white;
             &--original {}
             &--destination {
-                display: flex;
-                align-items: flex-end;
+                display: inline-block;
             }
             &:first-child {
                 @include margin(0, 0, 0, 30px);
@@ -66,7 +67,7 @@
                 @include margin(0, 12px, 0, 0);
                 &-number {
                     font-size: $extra-large;
-                    font-weight: 900;
+                    font-weight: 700;
                 }
             }
         }

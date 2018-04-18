@@ -37,7 +37,7 @@
                         leaving from
                     </span>
                     <div class="flight-short-info__city">
-                        <span class="flight-short-info__city-long">budapest</span>
+                        <address class="flight-short-info__city-long">budapest</add>
                         <span class="flight-short-info__city-short">bud</span>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                         &nbsp;
                     </span>
                     <div class="flight-short-info__city">
-                        <span class="flight-short-info__city-long">barcelona el prat</span>
+                        <address class="flight-short-info__city-long">barcelona el prat</add>
                         <span class="flight-short-info__city-short">bcn</span>
                     </div>
                 </div>
@@ -82,7 +82,7 @@
         <!-- discount-club -->
         <section class="discount-club">
             <div class="discount-club__inner">
-                <button class="discount-club__cta">
+                <button type="button" class="discount-club__cta">
                     Show Discount Club fares
                 </button>
                 <div class="discount-club__details">
@@ -203,7 +203,7 @@
                         </li>
                     </ul>
                 </div>
-                <button class="discount-club-club-price__cta">join discount-club club</button>
+                <button type="button" class="discount-club-club-price__cta">join discount-club club</button>
             </div>
             <!--discount-club club price- -->
         </section>
@@ -213,9 +213,9 @@
             <div class="flight-info__header">
                 <span class="flight-info__flight-type">outbound</span>
                 <div class="flight-info__flight-details">
-                    <span class="flight-info__flight-details__origin">budapest</span>
+                    <address class="flight-info__flight-details__origin">budapest</address>
                     <img src="dist/img/w-arrow-angle-right.svg" class="flight-info__details__icon" />
-                    <span class="flight-info__flight-details__destination">barcelona el prat</span>
+                    <address class="flight-info__flight-details__destination">barcelona el prat</address>
                 </div>
             </div>
             <div class="flight-info__flight-date">
@@ -272,9 +272,9 @@
                 <!-- flight package prices-->
                 <ul class="flight-packages">
                     <li class="flight-packages__package flight-packages__package--basic">
-                        <button class="flight-packages__package__price-cta">€9.99</button>
-                        <button class="flight-packages__package__price-cta">€9.99</button>
-                        <button class="flight-packages__package__price-cta">€9.99</button>
+                        <button type="button" class="flight-packages__package__price-cta">€9.99</button>
+                        <button type="button" class="flight-packages__package__price-cta">€9.99</button>
+                        <button type="button" class="flight-packages__package__price-cta">€9.99</button>
                         <div class="flight-packages__package__details flight-package-details--basic">
                             <h6 class="flight-packages__package__details-title">just the essentials</h6>
                             <ul class="flight-packages__package__details__list">
@@ -284,9 +284,9 @@
                         </div>
                     </li>
                     <li class="flight-packages__package flight-packages__package--standard">
-                        <button class="flight-packages__package__price-cta">€19.99</button>
-                        <button class="flight-packages__package__price-cta">€19.99</button>
-                        <button class="flight-packages__package__price-cta">€19.99</button>
+                        <button type="button" class="flight-packages__package__price-cta">€19.99</button>
+                        <button type="button" class="flight-packages__package__price-cta">€19.99</button>
+                        <button type="button" class="flight-packages__package__price-cta">€19.99</button>
                         <div class="flight-packages__package__details flight-package-details--standard">
                             <h6 class="flight-packages__package__details-title">€2.25 cheaper in bundle</h6>
                             <ul class="flight-packages__package__details__list">
@@ -297,9 +297,9 @@
                         </div>
                     </li>
                     <li class="flight-packages__package flight-packages__package--plus">
-                        <button class="flight-packages__package__price-cta">€29.99</button>
-                        <button class="flight-packages__package__price-cta">€29.99</button>
-                        <button class="flight-packages__package__price-cta">€29.99</button>
+                        <button type="button" class="flight-packages__package__price-cta">€29.99</button>
+                        <button type="button" class="flight-packages__package__price-cta">€29.99</button>
+                        <button type="button" class="flight-packages__package__price-cta">€29.99</button>
                         <div class="flight-packages__package__details flight-package-details--plus">
                             <h6 class="flight-packages__package__details-title">€3.25 cheaper in bundle</h6>
                             <ul class="flight-packages__package__details__list">
@@ -328,61 +328,61 @@
                 </div>
             </div>
             <!--flight date -->
-            <div class="flight-date">
-                <a type="button" href="#">
-                    <img src="dist/img/w-arrow-angle-left-pink.svg" class="flight-date__icon flight-date__icon--previous" alt="previous flight date"
+            <div class="flight-days-carousel">
+                <a type="button" class="flight-days-carousel__previous-date" href="#">
+                    <img src="dist/img/w-arrow-angle-left-pink.svg" class="flight-days-carousel__icon flight-days-carousel__icon--previous" alt="previous flight date"
                     />
                 </a>
-                <ul class="flight-date__available-day-list">
-                    <li class="flight-date__available-day-list-item">
-                        <time class="flight-date__available-day-list-item__date">mon 28</time>
-                        <div class="flight-date__available-day-list-item__highlighted"></div>
+                <ol class="flight-days-carousel__available-day__list">
+                    <li class="flight-days-carousel__available-day__list-item">
+                        <time class="flight-days-carousel__available-day__list-item__date">mon 28</time>
+                        <div class="flight-days-carousel__available-day__list-item__highlighted"></div>
                     </li>
-                    <li class="flight-date__available-day-list-item">
-                        <time class="flight-date__available-day-list-item__date">tue 29</time>
-                        <div class="flight-date__available-day-list-item__highlighted"></div>
+                    <li class="flight-days-carousel__available-day__list-item">
+                        <time class="flight-days-carousel__available-day__list-item__date">tue 29</time>
+                        <div class="flight-days-carousel__available-day__list-item__highlighted"></div>
                     </li>
-                    <li class="flight-date__available-day-list-item">
-                        <time class="flight-date__available-day-list-item__date">wed 30</time>
-                        <div class="flight-date__available-day-list-item__highlighted"></div>
+                    <li class="flight-days-carousel__available-day__list-item">
+                        <time class="flight-days-carousel__available-day__list-item__date">wed 30</time>
+                        <div class="flight-date__available-day__list-item__highlighted"></div>
                     </li>
-                    <li class="flight-date__available-day-list-item">
-                        <time class="flight-date__available-day-list-item__date">thu 1</time>
-                        <div class="flight-date__available-day-list-item__highlighted"></div>
+                    <li class="flight-days-carousel__available-day__list-item">
+                        <time class="flight-days-carousel__available-day__list-item__date">thu 1</time>
+                        <div class="flight-days-carousel__available-day__list-item__highlighted"></div>
                     </li>
-                    <li class="flight-date__available-day-list-item">
-                        <time class="flight-date__available-day-list-item__date">fri 2</time>
-                        <div class="flight-date__available-day-list-item__highlighted"></div>
+                    <li class="flight-days-carousel__available-day__list-item">
+                        <time class="flight-days-carousel__available-day__list-item__date">fri 2</time>
+                        <div class="flight-days-carousel__available-day__list-item__highlighted"></div>
                     </li>
-                    <li class="flight-date__available-day-list-item flight-date__available-day-list-item--selected-day">
-                        <time class="flight-date__available-day-list-item__date">sat 3</time>
-                        <div class="flight-date__available-day-list-item__highlighted"></div>
+                    <li class="flight-days-carousel__available-day__list-item flight-days-carousel__available-day__list-item--selected-day">
+                        <time class="flight-days-carousel__available-day__list-item__date">sat 3</time>
+                        <div class="flight-days-carousel__available-day__list-item__highlighted"></div>
                     </li>
-                    <li class="flight-date__available-day-list-item">
-                        <time class="flight-date__available-day-list-item__date">sun 4</time>
-                        <div class="flight-date__available-day-list-item__highlighted"></div>
+                    <li class="flight-days-carousel__available-day__list-item">
+                        <time class="flight-days-carousel__available-day__list-item__date">sun 4</time>
+                        <div class="flight-days-carousel__available-day__list-item__highlighted"></div>
                     </li>
-                    <li class="flight-date__available-day-list-item">
-                        <time class="flight-date__available-day-list-item__date">mon 5</time>
-                        <div class="flight-date__available-day-list-item__highlighted flight-date__available-day-list-item--not-available-day">
+                    <li class="flight-days-carousel__available-day__list-item">
+                        <time class="flight-days-carousel__available-day__list-item__date">mon 5</time>
+                        <div class="flight-days-carousel__available-day__list-item__highlighted flight-days-carousel__available-day__list-item--not-available-day">
                             <img src="dist/img/w-not-available.svg" alt="flight date not available" />
                         </div>
                     </li>
-                    <li class="flight-date__available-day-list-item">
-                        <time class="flight-date__available-day-list-item__date">tue 5</time>
-                        <div class="flight-date__available-day-list-item__highlighted"></div>
+                    <li class="flight-days-carousel__available-day__list-item">
+                        <time class="flight-days-carousel__available-day__list-item__date">tue 5</time>
+                        <div class="flight-days-carousel__available-day__list-item__highlighted"></div>
                     </li>
-                    <li class="flight-date__available-day-list-item">
-                        <time class="flight-date__available-day-list-item__date">wed 6</time>
-                        <div class="flight-date__available-day-list-item__highlighted"></div>
+                    <li class="flight-days-carousel__available-day__list-item">
+                        <time class="flight-days-carousel__available-day__list-item__date">wed 6</time>
+                        <div class="flight-days-carousel__available-day__list-item__highlighted"></div>
                     </li>
-                    <li class="flight-date__available-day-list-item">
-                        <time class="flight-date__available-day-list-item__date">thu 7</time>
-                        <div class="flight-date__available-day-list-item__highlighted"></div>
+                    <li class="flight-days-carousel__available-day__list-item">
+                        <time class="flight-days-carousel__available-day__list-item__date">thu 7</time>
+                        <div class="flight-days-carousel__available-day__list-item__highlighted"></div>
                     </li>
-                </ul>
-                <a type="button" href="#">
-                    <img src="dist/img/w-arrow-angle-right-pink.svg" class="flight-date__icon flight-date__icon--next" alt="next flight date"
+                </ol>
+                <a type="button" href="#" class="flight-days-carousel__next-date" >
+                    <img src="dist/img/w-arrow-angle-right-pink.svg" class="flight-days-carousel__icon flight-date__icon--next" alt="next flight date"
                     />
                 </a>
             </div>

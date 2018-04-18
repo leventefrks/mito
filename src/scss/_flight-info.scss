@@ -2,19 +2,20 @@
     grid-column: 2 / -1;
     grid-row: 3;
     background-color: $white;
+    box-shadow: 1px 1px 10px 1px $grey-dark;
     @include border-radius(3px);
     &__header {
         height: 55px;
         display: flex;
         align-items: center;
         justify-content: space-around;
-        background-color: $grey-dark;
+        background-color: $grey-light;
     }
     &__flight-type {
         flex: 1;
         color: $font-grey;
         font-size: $normal;
-        font-weight: 900;
+        font-weight: 700;
         @include padding(0, 0, 0, 30px);
         @include text-transform(y);
     }
@@ -26,6 +27,7 @@
         &__origin,
         &__destination {
             text-transform: capitalize;
+            display: inline-block;
         }
     }
     &__flight-date {
@@ -62,6 +64,7 @@
         grid-template-columns: 167px repeat(3, 1fr);
         grid-auto-flow: row;
         border-top: 1px solid $grey-light;
+
         .flight-package-header {
             display: flex;
             justify-content: space-around;
@@ -137,7 +140,6 @@
                     }
                 }
             }
-            
         }
     }
     .additional-info {
@@ -164,13 +166,13 @@
         &__more-dates {
             color: $font;
             font-size: $small;
-            font-weight: 900;
+            font-weight: 700;
         }
         &__calendar,
         &__chart {
             color: $font;
             font-size: $extra-small;
-            font-weight: 900;
+            font-weight: 700;
             text-decoration: none;
             transition: all .24s ease-in;
             &:hover {
@@ -193,22 +195,28 @@
             @include margin(0, 0, 0, 8px);
         }
     }
-    .flight-date {
-        width: 100%;
+    .flight-days-carousel {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        background-color: $grey-dark;
+        background-color: $grey-light;
+        overflow: hidden;
+        position: relative;
+        min-width: 100%;;
         &__icon {
             @include padding(0, 10px, 0, 10px);
         }
-        &__available-day-list {
+        &__available-day__list {
+            flex:1;
             display: flex;
+            flex-wrap: nowrap;
             @include padding(40px, 0, 20px, 0);
             &-item {
+                flex-grow: 1;
                 height: 80px;
-                border: 2px solid $grey-light;
+                border: 1px solid $grey-dark;
                 background-color: $white;
+                text-align: center;
                 cursor: pointer;
                 @include border-radius(3px);
                 @include padding(6px, 6px, 6px, 6px);
