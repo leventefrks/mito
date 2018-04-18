@@ -38,58 +38,60 @@
         <![endif]-->
     <!-- main-->
     <!--header -->
-    <header class="header">
-        <div class="header__inner">
-            <!-- mito logo-->
-            <a href="https://mito.hu/" class="logo">
-                <img src="dist/img/w-cross.svg" class="logo__icon" alt="mito + a haverok : )" />
-            </a>
-            <!-- mito logo-->
-            <!-- flight short info -->
-            <div class="flight-short-info-details">
-                <div class="flight-short-info flight-short--origin">
-                    <span class="flight-short-info__text">
-                        leaving from
-                    </span>
-                    <div class="flight-short-info__city">
-                        <address class="flight-short-info__city-long">budapest</add>
-                            <span class="flight-short-info__city-short">bud</span>
+    <header class="header-fixed">
+        <nav class="header">
+            <div class="header__inner">
+                <!-- mito logo-->
+                <a href="https://mito.hu/" class="logo">
+                    <i class="icon icon-w-cross logo__icon" alt="mito + a haverok : )"></i>
+                </a>
+                <!-- mito logo-->
+                <!-- flight short info -->
+                <div class="flight-short-info-details">
+                    <div class="flight-short-info flight-short--origin">
+                        <span class="flight-short-info__text">
+                            leaving from
+                        </span>
+                        <div class="flight-short-info__city">
+                            <address class="flight-short-info__city-long">budapest</add>
+                                <span class="flight-short-info__city-short">bud</span>
+                        </div>
+                    </div>
+                    <i class="flight-direction-icon icon icon-w-double-arrows"></i>
+                    <div class="flight-short-info flight-short-info--destination">
+                        <span class="flight-short-info__text">
+                            &nbsp;
+                        </span>
+                        <div class="flight-short-info__city">
+                            <address class="flight-short-info__city-long">barcelona el prat</add>
+                                <span class="flight-short-info__city-short">bcn</span>
+                        </div>
                     </div>
                 </div>
-                <img src="dist/img/w-double-arrows.svg" class="flight-direction-icon" alt="flight direction" />
-                <div class="flight-short-info flight-short-info--destination">
-                    <span class="flight-short-info__text">
-                        &nbsp;
-                    </span>
-                    <div class="flight-short-info__city">
-                        <address class="flight-short-info__city-long">barcelona el prat</add>
-                            <span class="flight-short-info__city-short">bcn</span>
+                <!-- flight short info -->
+                <!-- passengers info -->
+                <div class="passengers">
+                    <div class="passengers__text">passengers</div>
+                    <div class="passengers__inner">
+                        <span class="passengers__info passengers__info--adult">
+                            <span class="passengers__info-number passengers__info-number--adult">2</span>
+                            <i class="passengers-adult-icon icon icon-w-passenger-lg"></i>
+                        </span>
+                        <span class="passengers__info passengers__info--children">
+                            <span class="passengers__info-number passengers__info-number--children">3</span>
+                            <i class="passengers-children-icon icon icon-w-passenger-sm"></i>
+                        </span>
                     </div>
                 </div>
+                <!-- passengers info -->
             </div>
-            <!-- flight short info -->
-            <!-- passengers info -->
-            <div class="passengers">
-                <div class="passengers__text">passengers</div>
-                <div class="passengers__inner">
-                    <span class="passengers__info passengers__info--adult">
-                        <span class="passengers__info-number passengers__info-number--adult">2</span>
-                        <img src="dist/img/w-passenger-lg.svg" class="passengers-adult-icon" alt="adult passenger icon" />
-                    </span>
-                    <span class="passengers__info passengers__info--children">
-                        <span class="passengers__info-number passengers__info-number--children">3</span>
-                        <img src="dist/img/w-passenger-sm.svg" class="passengers-children-icon" alt="children passenger icon" />
-                    </span>
-                </div>
-            </div>
-            <!-- passengers info -->
-        </div>
+        </nav>
     </header>
     <!--header -->
     <main class="main">
         <!--booking title-->
         <section class="booking-title">
-            <img src="dist/img/w-plane.svg" class="booking-title__icon" alt="booking-title-icon" />
+            <i class="booking-title__icon icon icon-w-plane"></i>
             <h2 class="booking-title__title">select flight</h2>
         </section>
         <!--booking title-->
@@ -108,11 +110,11 @@
                     </div>
                 </div>
             </div>
-            <a href="#" class="discount-club__read-more-link">read more</a>
+            <a href="http://www.leventefarkas.com" class="discount-club__read-more-link" title="read more about me : )">read more</a>
         </section>
         <!-- discount-club -->
         <!-- itinerary-->
-        <section class="itinerary">
+        <aside class="itinerary">
             <!-- flight -->
             <ul class="itinerary__details itinerary__details-flight">
                 <h4 class="itinerary__sub-title itinerary__sub-title--default">flights</h4>
@@ -220,7 +222,7 @@
                 <button type="button" class="discount-club-club-price__cta">join discount-club club</button>
             </div>
             <!--discount-club club price- -->
-        </section>
+        </aside>
         <!-- itinerary-->
         <!-- flight-info -->
         <section class="flight-info">
@@ -228,15 +230,14 @@
                 <span class="flight-info__flight-type">outbound</span>
                 <div class="flight-info__flight-details">
                     <address class="flight-info__flight-details__origin">budapest</address>
-                    <img src="dist/img/w-arrow-angle-right.svg" class="flight-info__details__icon" />
+                    <i class="flight-info__details__icon icon icon-w-arrow-angle-right"></i>
                     <address class="flight-info__flight-details__destination">barcelona el prat</address>
                 </div>
             </div>
             <div class="flight-info__flight-date">
                 <div class="flight-info__flight-date__inner">
                     <a href="#" class="flight-info__flight-date__previous">
-                        <img src="dist/img/w-arrow-angle-left-pink.svg" class="flight-info__flight-date__icon  flight-info__flight-date__icon--previous"
-                            alt="flight-date-direction-previous" />
+                        <i class="icon icon-w-arrow-angle-left-pink flight-info__flight-date__icon  flight-info__flight-date__icon--previous "></i>
                     </a>
                     <time class="flight-info__flight-date__date flight-info__flight-date__previous-date">wed 7 october</ti>
                 </div>
@@ -244,8 +245,7 @@
                 <div class="flight-info__flight-date__inner">
                     <time class="flight-info__flight-date__date flight-info__flight-date__next-date">wed 7 november</time>
                     <a href="#" class="flight-info__flight-date__next">
-                        <img src="dist/img/w-arrow-angle-right-pink.svg" class="flight-info__flight-date__icon flight-info__flight-date__icon--next"
-                            alt="flight-date-direction-next" />
+                        <i class="icon icon-w-arrow-angle-right-pink flight-info__flight-date__icon flight-info__flight-date__icon--next"></i>
                     </a>
                 </div>
             </div>
@@ -268,17 +268,17 @@
                 <ul class="flight-schedule">
                     <li class="flight-schedule__time">
                         <time class="flight-schedule__time-text">06:15</time>
-                        <img src="dist/img/w-arrow-angle-right-grey.svg" class="flight-schedule__time-icon" alt="fight schedule arrow">
+                        <i class="flight-schedule__time-icon icon icon-w-arrow-angle-right-grey"></i>
                         <time class="flight-schedule__time-text">08:20</time>
                     </li>
                     <li class="flight-schedule__time">
                         <time class="flight-schedule__time-text">09:15</time>
-                        <img src="dist/img/w-arrow-angle-right-grey.svg" class="flight-schedule__time-icon" alt="fight schedule arrow">
+                        <i class="flight-schedule__time-icon icon icon-w-arrow-angle-right-grey"></i>
                         <time class="flight-schedule__time-text">10:20</time>
                     </li>
                     <li class="flight-schedule__time">
                         <time class="flight-schedule__time-text">17:15</time>
-                        <img src="dist/img/w-arrow-angle-right-grey.svg" class="flight-schedule__time-icon" alt="fight schedule arrow">
+                        <i class="flight-schedule__time-icon icon icon-w-arrow-angle-right-grey"></i>
                         <time class="flight-schedule__time-text">18:20</time>
                     </li>
                 </ul>
@@ -344,8 +344,7 @@
             <!--flight date -->
             <div class="flight-days-carousel">
                 <a href="#" type="button" class="flight-days-carousel__previous-date">
-                    <img src="dist/img/w-arrow-angle-left-pink.svg" class="flight-days-carousel__icon flight-days-carousel__icon--previous" alt="previous flight date"
-                    />
+                    <i class="flight-days-carousel__icon flight-days-carousel__icon--previous icon icon-w-arrow-angle-left-pink"></i>
                 </a>
                 <ol class="flight-days-carousel__available-day__list">
                     <li class="flight-days-carousel__available-day__list-item">
@@ -358,7 +357,7 @@
                     </li>
                     <li class="flight-days-carousel__available-day__list-item">
                         <time class="flight-days-carousel__available-day__list-item__date">wed 30</time>
-                        <div class="flight-date__available-day__list-item__highlighted"></div>
+                        <div class="flight-days-carousel__available-day__list-item__highlighted"></div>
                     </li>
                     <li class="flight-days-carousel__available-day__list-item">
                         <time class="flight-days-carousel__available-day__list-item__date">thu 1</time>
@@ -370,7 +369,7 @@
                     </li>
                     <li class="flight-days-carousel__available-day__list-item flight-days-carousel__available-day__list-item--selected-day">
                         <time class="flight-days-carousel__available-day__list-item__date">sat 3</time>
-                        <div class="flight-days-carousel__available-day__list-item__highlighted"></div>
+                        <div class="flight-days-carousel__available-day__list-item__highlighted flight-days-carousel__available-day__list-item__highlighted--selected-day"></div>
                     </li>
                     <li class="flight-days-carousel__available-day__list-item">
                         <time class="flight-days-carousel__available-day__list-item__date">sun 4</time>
@@ -381,22 +380,21 @@
                         <img src="dist/img/w-not-available.svg" class="flight-days-carousel__available-day__list-item__icon" alt="flight
                             date not available " />
                     </li>
-                    <li class="flight-days-carousel__available-day__list-item ">
-                        <time class="flight-days-carousel__available-day__list-item__date ">tue 5</time>
-                        <div class="flight-days-carousel__available-day__list-item__highlighted "></div>
+                    <li class="flight-days-carousel__available-day__list-item">
+                        <time class="flight-days-carousel__available-day__list-item__date">tue 5</time>
+                        <div class="flight-days-carousel__available-day__list-item__highlighted"></div>
                     </li>
-                    <li class="flight-days-carousel__available-day__list-item ">
-                        <time class="flight-days-carousel__available-day__list-item__date ">wed 6</time>
-                        <div class="flight-days-carousel__available-day__list-item__highlighted "></div>
+                    <li class="flight-days-carousel__available-day__list-item">
+                        <time class="flight-days-carousel__available-day__list-item__date">wed 6</time>
+                        <div class="flight-days-carousel__available-day__list-item__highlighted"></div>
                     </li>
-                    <li class="flight-days-carousel__available-day__list-item ">
-                        <time class="flight-days-carousel__available-day__list-item__date ">thu 7</time>
-                        <div class="flight-days-carousel__available-day__list-item__highlighted "></div>
+                    <li class="flight-days-carousel__available-day__list-item">
+                        <time class="flight-days-carousel__available-day__list-item__date">thu 7</time>
+                        <div class="flight-days-carousel__available-day__list-item__highlighted"></div>
                     </li>
                 </ol>
-                <a type="button " href="# " class="flight-days-carousel__next-date ">
-                    <img src="dist/img/w-arrow-angle-right-pink.svg " class="flight-days-carousel__icon flight-date__icon--next
-                            " alt="next flight date " />
+                <a type="button " href="# " class="flight-days-carousel__next-date">
+                    <i class="flight-days-carousel__icon flight-date__icon--next icon icon-w-arrow-angle-right-pink"></i>
                 </a>
             </div>
             <!--flight date-->

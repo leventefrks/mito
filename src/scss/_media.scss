@@ -83,8 +83,8 @@
     .main {
         grid-column: 1 / -1;
         @include padding(0, 8px, 0, 8px);
-        .booking-title{
-            @include margin(25px,0,14px,0);
+        .booking-title {
+            @include margin(25px, 0, 14px, 0);
         }
         .flight-package-types {
             grid-template-columns: 1fr;
@@ -99,9 +99,38 @@
                 justify-content: space-around;
                 flex-direction: row;
             }
-            .flight-packages{
+            .flight-packages {
                 grid-column: 1 / -1;
             }
         }
+        .flight-days-carousel {
+            &__available-day__list {
+                &-item {
+                    &__date {
+                        writing-mode: vertical-rl;
+                        text-orientation: upright;
+                        letter-spacing: -4px;
+                    }
+                    &__icon {
+                        display: block;
+                        width: 100%;
+                        margin: 8px auto 0;
+                        max-width: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .header {
+        justify-content: space-around;
+        .passengers {
+            display: none;
+        }
+    }
+    .itinerary{
+        @include padding(0,0,28px,0);
     }
 }

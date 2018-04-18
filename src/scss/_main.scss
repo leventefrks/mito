@@ -15,5 +15,6 @@ body {
     grid-template-columns: 222px 1fr;
     grid-template-rows: auto auto auto;
     grid-auto-rows: auto;
+    @include margin(55px, 0, 0, 0);
     @include padding(0, 28px, 28px, 28px);
 }
