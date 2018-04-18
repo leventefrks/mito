@@ -1,28 +1,23 @@
-// font icons
-@import "style.css";
-// -- custom reset
-@import 'vendor/reset';
-// -- custom normalize  
-@import 'vendor/normalize';
-// -- font
-@import 'typography';
-// -- site colors
-@import 'colors';
-// -- variables
-@import 'variables';
-// -- most used re-occurring elements
-@import 'mixins';
-// -- site description
-@import 'main';
-//-- header
-@import 'header';
-//-- actual page title 
-@import 'booking-title';
-//-- discount club 
-@import 'discount-club';
-//-- sidebar 
-@import 'itinerary';
-//-- flight info
-@import 'flight-info';
+// generic - third party "libraries" reset & normalize
+@import 'generic/vendor/reset';
+@import 'generic/vendor/normalize';
+
+// settings - font icons,fonts, colors & variables
+@import "settings/fonts";
+@import 'settings/typography';
+@import 'settings/colors';
+@import 'settings/variables';
+
+// tools - re-occurring elements
+@import 'tools/mixins';
+
+// site components
+@import 'components/main';
+@import 'components/header';
+@import 'components/booking-title';
+@import 'components/discount-club';
+@import 'components/itinerary';
+@import 'components/flight-info';
+
 //-- responsive media queries 
-@import 'media';
+@import 'tools/media';
