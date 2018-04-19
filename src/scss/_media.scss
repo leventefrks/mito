@@ -1,0 +1,232 @@
+@media screen and (max-width: 1024px) {
+    .header {
+        font-size: $medium;
+        .logo {
+            @include margin(0, 0, 0, 0);
+        }
+        &__inner {
+            justify-content: space-between;
+            background-color: $blue-dark;
+        }
+        .flight-short-info {
+            @include margin(0, 0, 0, 0);
+            &:first-child {
+                @include margin(0, 0, 0, 30px);
+            }
+        }
+    }
+    .main {
+        grid-template-columns: 1fr;
+        grid-column-gap: 0;
+        @include padding(0, 8px, 0, 8px);
+        .booking-title {
+            grid-column: 1 / -1;
+            justify-content: center;
+            &__title {
+                font-size: $medium;
+            }
+        }
+        .discount-club {
+            grid-column: 1 / -1;
+            grid-row: 2;
+            @include padding(16px, 16px, 16px, 16px);
+            &__cta {
+                @include padding(9px, 28px, 9px, 28px);
+            }
+        }
+        .flight-info {
+            grid-column: 1 / -1;
+            grid-row: 4;
+            &__header {
+                @include padding(8px, 8px, 8px, 8px);
+            }
+            &__flight-type {
+                font-size: $small;
+            }
+            &__flight-details {
+                font-size: $medium;
+            }
+        }
+        .itinerary {
+            grid-column: 1 / -1;
+            grid-row: 5;
+            &__details {
+                justify-content: space-around;
+                &-item {
+                    font-size: $large;
+                    &__price {
+                        font-size: $large;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        &__inner {
+            @include padding(5px, 8px, 5px, 8px);
+        }
+        .flight-short-info {
+            &__city {
+                font-size: $small;
+            }
+        }
+        .flight-direction-icon {
+            @include margin(0, 5px, 0, 5px);
+        }
+        .passengers {
+            font-size: $small;
+        }
+    }
+    .main {
+        grid-column: 1 / -1;
+        @include padding(0, 8px, 0, 8px);
+        .booking-title {
+            @include margin(25px, 0, 14px, 0);
+        }
+        .flight-info {
+            &__header {
+                font-size: $medium;
+            }
+            &__flight-date {
+                @include padding(6px, 6px, 6px, 6px);
+            }
+        }
+        .flight-package-types {
+            grid-template-columns: repeat(4, 1fr);
+            .flight-schedule {
+                font-size: $small;
+                &__time {
+                    display: flex;
+                    flex: auto;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    @include margin(0px, 0px, 0px, 0px);
+                    @include padding(12px, 12px, 12px, 12px);
+                }
+            }
+            .flight-package-header {}
+            .flight-packages {
+                &__package {
+                    &__price-cta {
+                        @include margin(5px, 5px, 5px, 5px);
+                        @include padding(12px, 12px, 12px, 12px);
+                    }
+                }
+            }
+        }
+        .flight-days-carousel {
+            &__available-day__list {
+                &-item {
+                    &__date {
+                        writing-mode: vertical-rl;
+                        text-orientation: upright;
+                        letter-spacing: -4px;
+                    }
+                    &__icon {
+                        display: block;
+                        width: 100%;
+                        margin: 8px auto 0;
+                        max-width: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .header {
+        justify-content: space-around;
+        &__inner {
+            justify-content: flex-start;
+        }
+    }
+    .flight-info {
+        &__header {
+            flex-direction: column;
+        }
+        &__flight-type {
+            @include margin(0, 0, 6px, 0);
+        }
+        &__flight-details {
+            font-size: $normal;
+        }
+        &__flight-date {
+            &__current-date {
+                font-size: $normal;
+                text-align:center;
+            }
+        }
+        .flight-days-carousel {
+            display: none;
+        }
+    }
+    .discount-club {
+        flex-direction: column;
+        &__inner {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            .discount-club__cta {
+                @include margin(0, 0, 6px, 0);
+            }
+        }
+        &__details {
+            &__on-flight {
+                font-size: $small;
+                @include margin(0, 0, 6px, 0);
+            }
+        }
+        &__read-more-link {
+            @include margin(6px, 0, 0, 0);
+        }
+    }
+    .itinerary {
+        @include padding(0, 0, 28px, 0);
+    }
+    .main {
+        .additional-info,
+        .flight-days-carousel {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        .passenger {
+            display: none;
+        }
+    }
+    .main {
+        .flight-info__header {
+            font-size: $small;
+        }
+        .flight-package-types {
+            .flight-schedule {
+                font-size: $extra-small;
+                &__time {
+                    @include padding(0, 0, 0, 0);
+                }
+            }
+        }
+        .flight-info {
+            .flight-packages {
+                &__package {
+                    @include padding(5px, 5px, 5px, 5px);
+                    &__price-cta {
+                        font-weight: 600;
+                        border: 1px solid $pink-dark;
+                        @include margin(2px, 2px, 2px, 2px);
+                        @include padding(5px, 5px, 5px, 5px);
+                    }
+                }
+            }
+        }
+    }
+}

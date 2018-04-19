@@ -1,23 +1,22 @@
 // generic - third party "libraries" reset & normalize
-@import 'generic/vendor/reset';
-@import 'generic/vendor/normalize';
+@import 'reset';
+@import 'normalize';
 
 // settings - font icons,fonts, colors & variables
-@import "settings/fonts";
-@import 'settings/typography';
-@import 'settings/colors';
-@import 'settings/variables';
+@import "fonts";
+@import 'typography';
+@import 'colors';
+@import 'variables';
 
-// tools - re-occurring elements
-@import 'tools/mixins';
+// tools - re-occurring elements & media queries for responsive views
+@import 'mixins';
 
 // site components
-@import 'components/main';
-@import 'components/header';
-@import 'components/booking-title';
-@import 'components/discount-club';
-@import 'components/itinerary';
-@import 'components/flight-info';
+@import 'header';
+@import 'booking-title';
+@import 'discount-club';
+@import 'main';
+@import 'itinerary';
+@import 'flight-info';
 
-//-- responsive media queries 
-@import 'tools/media';
+@import 'media';
