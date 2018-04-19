@@ -17,12 +17,15 @@
     background-color: $blue-dark;
     box-sizing: border-box;
     &__inner {
-        display: flex;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 30px;
+        align-content: center;
         @include padding(10px, 28px, 10px, 28px);
         .logo {
             text-decoration: none;
-            @include margin(0, 50px, 0, 0);
+            display: flex;
+            align-items: center;
             &__icon {
                 transition: all .64s ease-in;
                 &:hover {
@@ -34,6 +37,7 @@
         .flight-short-info-details {
             display: flex;
             align-items: center;
+            grid-column: 3 / 8;
         }
         .flight-short-info {
             flex-direction: column;
@@ -41,9 +45,6 @@
             &--original {}
             &--destination {
                 display: inline-block;
-            }
-            &:first-child {
-                @include margin(0, 0, 0, 30px);
             }
             &__text {
                 letter-spacing: 1px;
@@ -70,7 +71,7 @@
         }
         .passengers {
             color: $white;
-            @include margin(0, 0, 0, 50px);
+            grid-column: 9/-1;
             &__text {
                 letter-spacing: 1px;
                 font-size: $extra-small;
