@@ -10,7 +10,7 @@ const gulp = require('gulp'),
 
 
 gulp.task('styles', () => {
-    return gulp.src('src/scss/base.scss')
+    return gulp.src('src/scss/*.scss')
         .pipe(plumber())
         .pipe(sass())
         .pipe(prefix('last 2 versions'))
@@ -25,12 +25,6 @@ gulp.task('htmlmin', function () {
     return gulp.src('./*.html')
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest('dist'));
-});
-
-gulp.task('postcss', function () {
-    return gulp.src('./dist/css/*.css')
-        .pipe(purify('index.html'))
-        .pipe(gulp.dest('./dist/css'));
 });
 
 gulp.task('browser-sync', () => {

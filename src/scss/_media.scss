@@ -10,9 +10,6 @@
         }
         .flight-short-info {
             @include margin(0, 0, 0, 0);
-            &:first-child {
-                @include margin(0, 0, 0, 30px);
-            }
         }
     }
     .main {
@@ -69,9 +66,12 @@
         &__inner {
             @include padding(5px, 8px, 5px, 8px);
         }
-        .flight-short-info {
-            &__city {
-                font-size: $small;
+        .flight-short-info-details {
+            grid-column: 2 / 8;
+            .flight-short-info {
+                &__city {
+                    font-size: $small;
+                }
             }
         }
         .flight-direction-icon {
@@ -98,14 +98,10 @@
         .flight-package-types {
             grid-template-columns: repeat(4, 1fr);
             .flight-schedule {
-                font-size: $small;
+                font-size: $normal;
                 &__time {
                     display: flex;
-                    flex: auto;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    @include margin(0px, 0px, 0px, 0px);
+                    @include margin(5px, 5px, 5px, 5px);
                     @include padding(12px, 12px, 12px, 12px);
                 }
             }
@@ -132,6 +128,7 @@
                         width: 100%;
                         margin: 8px auto 0;
                         max-width: 16px;
+                        font-size: $normal;
                     }
                 }
             }
@@ -144,6 +141,9 @@
         justify-content: space-around;
         &__inner {
             justify-content: flex-start;
+        }
+        .passengers{
+            display: none;
         }
     }
     .flight-info {
@@ -159,7 +159,7 @@
         &__flight-date {
             &__current-date {
                 font-size: $normal;
-                text-align:center;
+                text-align: center;
             }
         }
         .flight-days-carousel {
@@ -190,6 +190,7 @@
         @include padding(0, 0, 28px, 0);
     }
     .main {
+        .flight-months,
         .additional-info,
         .flight-days-carousel {
             display: none;

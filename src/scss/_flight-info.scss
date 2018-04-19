@@ -76,7 +76,7 @@
             display: flex;
             justify-content: space-around;
             grid-column: 2 / -1;
-            grid-template-rows: 1;
+            grid-row: 1;
             &__title {
                 flex: 1;
                 text-align: center;
@@ -118,7 +118,6 @@
                 flex: 1;
                 display: flex;
                 flex-direction: column;
-                align-items: center;
                 @include padding(0, 9px, 18px, 9px);
                 &--basic {}
                 &--standard {
@@ -142,7 +141,6 @@
                         font-size: $small;
                         text-align:left;
                         @include margin(20px, 0, 0, 0);
-                        @include padding(0, 0, 0, 16px);
                         &-item {
                             @include margin(10px, 0, 0, 0);
                             &:before {
@@ -210,6 +208,17 @@
             }
         }
     }
+    .flight-months{
+        display: flex;
+        background-color: $grey-light;
+        font-size: $extra-small;
+        color: $font-grey;
+        @include text-transform(y);
+        @include padding(20px, 30px, 0, 30px);
+        &__month{
+            @include margin(0,130px,0,0);
+        }
+    }
     .flight-days-carousel {
         display: flex;
         justify-content: space-around;
@@ -237,7 +246,7 @@
             display: flex;
             flex-wrap: nowrap;
             overflow: hidden;
-            @include padding(40px, 0, 20px, 0);
+            @include padding(10px, 0, 20px, 0);
             &-item {
                 flex: 1 1 100%;
                 height: 80px;
@@ -246,15 +255,24 @@
                 text-align: center;
                 position: relative;
                 cursor: pointer;
+                transition: all .24s ease-in;
                 @include border-radius(3px);
                 @include padding(6px, 6px, 6px, 6px);
                 @include margin(0, 2px, 0, 2px);
+                    &:hover{
+                        background-color: $grey-light;
+                    }
                 &--selected-day {
                     border: 2px solid $pink-dark;
                     background-color: $pink-dark;
+                    transition: all .24s ease-in;
+                    &:hover{
+                        background-color: $pink-light;
+                    }
                 }
                 &--not-available-day {
                     background-color: $grey-light;
+                    cursor: not-allowed;
                 }
                 &__highlighted {
                     background: $white;
@@ -265,32 +283,38 @@
                     bottom: auto;
                     height: 45%;
                     z-index: 0;
-                    &:nth-child(3) {
-                        height: 40%;
+                    &--one{
+                        height: 25%;
                     }
-                    &:nth-child(4) {
+                    &--two{
+                        height: 65%;
+                    }
+                    &--three{
+                        height: 80%;
+                    }
+                    &--four{
+                        height: 70%;
+                    }
+                    &--five{
+                        height: 25%;
+                    }
+                    &--six{
+                        height: 75%;
+                    }
+                    &--seven{
+                        height: 65%;
+                    }
+                    &--eight{
                         height: 30%;
                     }
-                    &:nth-child(5) {
+                    &--nine{
+                        height: 75%;
+                    }
+                    &--ten{
+                        height: 30%;
+                    }
+                    &--eleven{
                         height: 50%;
-                    }
-                    &:nth-child(6) {
-                        height: 45%;
-                    }
-                    &:nth-child(7) {
-                        height: 60%;
-                    }
-                    &:nth-child(8) {
-                        height: 55%;
-                    }
-                    &:nth-child(9) {
-                        height: 30%;
-                    }
-                    &:nth-child(10) {
-                        height: 10%;
-                    }
-                    &:nth-child(11) {
-                        height: 20%;
                     }
                 }
                 &__date {
@@ -303,6 +327,10 @@
                 }
                 &__icon {
                     @include margin(20px, 0, 0, 0);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: $large-icon;
                 }
             }
         }
